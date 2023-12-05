@@ -26,3 +26,13 @@
 .form-control {
   margin-left: 0px !important;
 }
+
+.powered-by {
+  color: #999;
+  font-family: 'Lato';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.07px;
+}
