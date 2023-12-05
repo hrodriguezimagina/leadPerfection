@@ -1,5 +1,4 @@
 /* Login Pages */
-
 :root {
   --primary: #FE8F01;
 }
@@ -37,6 +36,12 @@
 
 .login-background-color {
   background-color: var(--primary);
+}
+
+.login-forgotten-form {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.176) 0px 16px 48px 0px;
 }
 
 .login-background-opacity {
