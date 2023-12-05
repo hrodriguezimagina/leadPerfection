@@ -1,5 +1,9 @@
 /* Login Pages */
 
+:root {
+  --primary: #FE8F01;
+}
+
 .form-control {
   margin-left: 0px !important;
 }
@@ -29,6 +33,10 @@
   background:url('../images/background.jpg') center center;
   background-attachment: fixed;
   background-size:cover;
+}
+
+.login-background-color {
+  background-color: var(--primary);
 }
 
 .login-background-opacity {
