@@ -1,0 +1,28 @@
+.login {
+  color: rgba(0, 0, 0, 0.80);
+  /* Typography LP/Body 3 - Regular 14 */
+  font-family: 'Lato';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 157.143% */
+}
+
+.login-button {
+  color: #fff;
+  background-color: #18417D;
+}
+
+.login-image {        
+  background:url('../images/login.png') center center;
+  background-size:cover;
+}
+.input-group-text, .input-group > input {
+  background-color: rgb(0,0,0, 0.07) !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+.form-control {
+  margin-left: 0px !important;
+}
