@@ -23,29 +23,27 @@
                 <img src="./images/company-logo.png" class="img-fluid" alt="Company Logo">
               </div>
               <form class="mt-5">
-                <!-- Client id -->
-                <label for="client-id">Client ID</label>
-                <div class="input-group mb-3">
-                  <span class="input-group-text mdi mdi-account-key-outline" id="client-id-addon" style="font-size: 24px;"></span>
-                  <input type="text" class="form-control" id="client-id" aria-label="Client ID" aria-describedby="client-id-addon">
+                <div class="text-center"> 
+                  <h4>Two-Factor</h4>
+                  <h4>Authentication Required</h4>
                 </div>
-                <!-- User name -->
-                <label for="user-name">Username</label>
-                <div class="input-group mb-3">
-                  <span class="input-group-text mdi mdi-account" id="user-name-addon" style="font-size: 24px;"></span>
-                  <input type="text" class="form-control" id="user-name" aria-label="Username" aria-describedby="user-name-addon">
+                <div>
+                  <p>
+                    You’ve asked us to require a 6-digit login code when anyone tries to access your account from a new device or browser.
+                  </p> 
+                  <p>
+                    Please enter the 6-digit code from your code generator or 3rd party app below.
+                  </p>
                 </div>
-                <!-- Password -->
-                <label for="password">Password</label>
+                <!-- Login Code -->
                 <div class="input-group mb-3">
-                  <span class="input-group-text mdi mdi-account-key" id="password-addon" style="font-size: 24px;"></span>
-                  <input type="password" class="form-control" id="password" aria-label="Client ID" aria-describedby="password-addon">
+                  <input type="password" class="form-control" id="login-code" aria-label="Login code" placeholder="Login code">
                 </div>
                 <!-- Submit button -->
                 <div class="mt-5">
-                  <button class="w-100 btn btn-primary btn-lg login-button" type="submit">Sign In</button>
+                  <button class="w-100 btn btn-primary btn-lg login-button" type="submit">Continue</button>
                   <p class="fs-6 mt-5 text-center">
-                      <b>Did you forget your password?</b>
+                      <b>Need danother way to authenticate?</b>
                   </p>
                 </div>              
               </form>              
