@@ -1,3 +1,15 @@
+/* Login Pages */
+
+.form-control {
+  margin-left: 0px !important;
+}
+
+.input-group-text, .input-group > input {
+  background-color: rgb(0,0,0, 0.07) !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
 .login {
   color: rgba(0, 0, 0, 0.80);
   /* Typography LP/Body 3 - Regular 14 */
@@ -17,14 +29,15 @@
   background:url('../images/login.png') center center;
   background-size:cover;
 }
-.input-group-text, .input-group > input {
-  background-color: rgb(0,0,0, 0.07) !important;
-  border-left: 0 !important;
-  border-right: 0 !important;
-}
 
-.form-control {
-  margin-left: 0px !important;
+.login-paragraph {
+  color: #21272A;
+  text-align: justify;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
 }
 
 .powered-by {
@@ -36,3 +49,4 @@
   line-height: normal;
   letter-spacing: 0.07px;
 }
+/* Login Pages */
