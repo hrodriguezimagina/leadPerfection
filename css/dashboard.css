@@ -1,27 +1,43 @@
-/* Login Pages */
+/* Dashboard */
 :root {
+  --background-color: #F5F5F5;
   --primary: #FE8F01;
+  --primary-hover: #FEEEDA;
+  --white: #fff;
 }
 
 #content {
-  background-color: #F5F5F5;
+  background-color: var(--background-color);
   width: 100%;
   padding: 0;
-  min-height: 100vh;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  min-height: 100vh;  
 }
 
 #sidebar {
-  min-width: 300px;
-  max-width: 300px;
-  background: #fff;
-  color: #fff;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  /*min-width: 300px;  */
+  min-height: 100vh;
+  background: var(--white);  
 }
 
+#sidebar, #sidebar-menu, .sidebar-text {
+  transition-timing-function: ease-in;
+  transition: width 0.2s, height 1s;
+}
 
-/* Login Pages */
+/*customs*/
+.btn-active {
+  color: var(--white) !important;
+  background-color: var(--primary) !important;
+}
+
+.link-body-emphasis {
+  color: #777 !important;
+}
+
+.link-body-emphasis:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Dashboard */
+
+/*experiment*/
