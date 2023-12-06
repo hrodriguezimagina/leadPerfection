@@ -1,0 +1,27 @@
+/* Login Pages */
+:root {
+  --primary: #FE8F01;
+}
+
+#content {
+  background-color: #F5F5F5;
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#sidebar {
+  min-width: 300px;
+  max-width: 300px;
+  background: #fff;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+/* Login Pages */
