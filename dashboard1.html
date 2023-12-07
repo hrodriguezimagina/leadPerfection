@@ -15,7 +15,7 @@
     <div class="d-flex align-items-stretch">
       <!-- Sidebar -->
       <nav id="sidebar" class="vh-100">
-        <div class="p-4 pt-5">
+        <div class="p-4">
           <img src="./images/company-logo.png" class="img-fluid" alt="Company Logo">
           <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto pt-4 align-items-center align-items-stretch">
             <li class="nav-item">
@@ -94,15 +94,22 @@
           </div>
         </div>
       </nav>
-      <div id="content" class="vh-100">
-        <header class="p-3 mb-3 border-bottom">
-          <div class="container-fluid">
-            <div class="d-flex flex-wrap align-items-center justify-content-end">
+      <div class="vw-100 vh-100">
+        <header class="py-3">
+          <div class="container-fluid p-0 border-bottom">
+            <div class="d-flex flex-wrap align-items-center justify-content-end py-4">              
+              <button class="btn btn-light me-3" type="button" id="toggleSidebarButton">
+                <span class="mdi mdi-menu" style="font-size: 18px;"></span>
+              </button>
+              <!-- content title -->
+              <div class="flex-grow-1">
+                <h4>Dashboard</h4>
+              </div>
               <!-- job select -->
-              <div class="col-3 mb-3 mb-lg-0 me-lg-3">
-                <div class="input-group">
-                  <span class="input-group-text mdi mdi-briefcase-outline" id="password-addon" style="font-size: 24px;"></span>
-                  <select class="form-select" aria-label="Default select example" aria-describedby="password-addon">                  
+              <div class="col-3 mb-3 mb-lg-0 mx-4">
+                <div class="input-group">                  
+                  <span class="input-group-text mdi mdi-briefcase-outline bg-white" id="job-addon" style="font-size: 18px;"></span>
+                  <select class="form-select" aria-label="Default select example" aria-describedby="job-addon" style="border-left: none;">
                     <option selected>Select a job</option>
                     <option value="1">Job A</option>
                     <option value="2">Job B</option>
@@ -110,11 +117,13 @@
                   </select>
                 </div>
               </div>
+              <!-- notifications -->
+              <span class="mdi mdi-bell bg-white icon-primary" style="font-size: 24px;"></span>
               <!-- profile -->
-              <div class="dropdown text-end">
+              <div class="dropdown text-end mx-3">
                 <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                  <span>brubertone</span>
+                  <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+                  <span class="fw-bold">brubertone</span>
                 </a>
                 <ul class="dropdown-menu text-small" style="">                  
                   <li>
@@ -129,10 +138,14 @@
               </div>
             </div>
           </div>
+          <div class="container-fluid">
+            <span class="mdi mdi-home-variant icon-primary" style="font-size: 24px;"></span>
+          </div>
         </header>
-         <button class="btn btn-primary" type="button" id="toggleSidebarButton">
-            Toggle width collapse
-          </button>
+        <div id="content">
+          <p>CONTENT</p>
+        </div>
+         
       </div>
     </div>    
     <style type="text/css">    

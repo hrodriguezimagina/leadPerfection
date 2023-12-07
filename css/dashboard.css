@@ -7,21 +7,18 @@
 }
 
 #content {
-  /*background-color: var(--background-color);*/
-  width: 100%;
-  padding: 0;
-  min-height: 100vh;  
+  background-color: var(--background-color);
+  min-height: calc(100vh - 200px);
+}
+
+.icon-primary {
+  color: var(--primary);
 }
 
 #sidebar {
   /*min-width: 300px;  */
   min-height: 100vh;
   background: var(--white);  
-}
-
-#sidebar, #sidebar-menu, .sidebar-text {
-  transition-timing-function: ease-in;
-  transition: width 0.2s, height 1s;
 }
 
 /*customs*/
@@ -38,6 +35,9 @@
   background-color: var(--primary-hover);
 }
 
+#toggleSidebarButton {
+  border-radius: 0px 8px 8px 0px;
+}
+
 /* Dashboard */
 
-/*experiment*/
