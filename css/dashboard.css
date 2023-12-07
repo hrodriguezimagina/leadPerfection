@@ -8,7 +8,7 @@
 
 #content {
   background-color: var(--background-color);
-  min-height: calc(100vh - 200px);
+  min-height: calc(84vh);
 }
 
 .icon-primary {

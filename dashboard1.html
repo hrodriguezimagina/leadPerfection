@@ -14,8 +14,8 @@
   <body>
     <div class="d-flex align-items-stretch">
       <!-- Sidebar -->
-      <nav id="sidebar" class="vh-100">
-        <div class="p-4">
+      <nav id="sidebar" >
+        <div class="p-4 d-flex flex-column min-vh-100">
           <img src="./images/company-logo.png" class="img-fluid" alt="Company Logo">
           <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto pt-4 align-items-center align-items-stretch">
             <li class="nav-item">
@@ -86,13 +86,13 @@
             </li>
           </ul>
           <!-- Contact support -->
-          <div class="d-grid align-self-end">
-            <button type="button" class="btn btn-light">
+          <div class="d-flex flex-grow-1 align-items-end">
+            <button type="button" class="flex-grow-1 btn btn-light mt-auto align-items-center">
               <span class="mdi mdi-help-circle-outline" style="font-size: 20px;"></span>
-              <span class="sidebar-text" style="font-size: 14px;">Contact Support</span>
+              <span class="sidebar-text">Contact Support</span>
             </button>
           </div>
-        </div>
+      </div>
       </nav>
       <div class="vw-100 vh-100">
         <header class="pt-3">
