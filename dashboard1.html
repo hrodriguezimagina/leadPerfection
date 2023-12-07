@@ -95,7 +95,7 @@
         </div>
       </nav>
       <div class="vw-100 vh-100">
-        <header class="py-3">
+        <header class="pt-3">
           <div class="container-fluid p-0 border-bottom">
             <div class="d-flex flex-wrap align-items-center justify-content-end py-4">              
               <button class="btn btn-light me-3" type="button" id="toggleSidebarButton">
@@ -137,11 +137,26 @@
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="container-fluid">
-            <span class="mdi mdi-home-variant icon-primary" style="font-size: 24px;"></span>
-          </div>
+          </div>          
         </header>
+        <!-- breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-chevron px-3 py-2 m-0">
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis" href="#">
+                <span class="mdi mdi-home-variant icon-primary" style="font-size: 18px;"></span>
+                <span class="visually-hidden">Home</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis fw-semibold text-decoration-none" href="#">Library</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Data
+            </li>
+          </ol>
+        </nav>
+        <!-- content -->
         <div id="content">
           <p>CONTENT</p>
         </div>

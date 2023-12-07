@@ -31,7 +31,7 @@
   color: #777 !important;
 }
 
-.link-body-emphasis:hover {
+#sidebar-menu .link-body-emphasis:hover {
   background-color: var(--primary-hover);
 }
 
