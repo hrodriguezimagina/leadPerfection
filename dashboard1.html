@@ -95,6 +95,41 @@
         </div>
       </nav>
       <div id="content" class="vh-100">
+        <header class="p-3 mb-3 border-bottom">
+          <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-end">
+              <!-- job select -->
+              <div class="col-3 mb-3 mb-lg-0 me-lg-3">
+                <div class="input-group">
+                  <span class="input-group-text mdi mdi-briefcase-outline" id="password-addon" style="font-size: 24px;"></span>
+                  <select class="form-select" aria-label="Default select example" aria-describedby="password-addon">                  
+                    <option selected>Select a job</option>
+                    <option value="1">Job A</option>
+                    <option value="2">Job B</option>
+                    <option value="3">Job C</option>
+                  </select>
+                </div>
+              </div>
+              <!-- profile -->
+              <div class="dropdown text-end">
+                <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                  <span>brubertone</span>
+                </a>
+                <ul class="dropdown-menu text-small" style="">                  
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="mdi mdi-account" style="font-size: 20px;"></span>
+                      Edit Profile
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
          <button class="btn btn-primary" type="button" id="toggleSidebarButton">
             Toggle width collapse
           </button>
@@ -105,8 +140,7 @@
     <script type="text/javascript">
       $( document ).ready(function() {
 
-        jQuery("#toggleSidebarButton").on( "click", function() {
-          jQuery(".sidebar-text").toggle();
+        jQuery("#toggleSidebarButton").on( "click", function() {          
           if( jQuery("#sidebar").width() > '160'){
             jQuery("#sidebar-menu").removeClass('align-items-stretch')
             jQuery("#sidebar").width('128px')
@@ -114,6 +148,7 @@
             jQuery("#sidebar-menu").addClass('align-items-stretch');
             jQuery("#sidebar").width('296px');
           }
+          jQuery(".sidebar-text").toggle();
         });
         
 
