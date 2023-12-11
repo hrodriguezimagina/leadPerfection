@@ -1,6 +1,7 @@
 :root {
   --white: #fff;
   --black-black-70: rgba(0, 0, 0, 0.70);
+  --black-black-30: rgba(0, 0, 0, 0.30);
 }
 
 body {  
@@ -44,8 +45,21 @@ body {
   min-height: calc(84vh);
 }
 
+.custom-card {
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
 .icon-primary {
   color: var(--primary);
+}
+
+.icon-black-30 {
+  color: var(--black-black-30);
+}
+
+.icon-black-70 {
+  color: var(--black-black-70);
 }
 
 .link-body-emphasis {
