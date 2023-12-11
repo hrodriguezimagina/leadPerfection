@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <script  src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="d-flex align-items-stretch">
+      <!-- Sidebar -->
+      <nav id="sidebar" >
+        <div class="p-4 d-flex flex-column min-vh-100">
+          <img src="./images/company-logo.png" class="img-fluid" alt="Company Logo">
+          <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto pt-4 align-items-center align-items-stretch">
+            <li class="nav-item">
+              <a href="#" class="nav-link link-body-emphasis" aria-current="page">
+                <span class="mdi mdi-view-dashboard" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Dashboard</span>
+              </a>
+            </li>
+            <li>              
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-account-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-note-edit-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">New Notes</span> 
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-format-list-text" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Open ToDo</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">                
+                <span class="mdi mdi-flag-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Milestones</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link btn-active">
+                <span class="mdi mdi-file-document-outline " style="font-size: 20px;"></span>
+                <span class="sidebar-text">New Documents</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-human-greeting-proximity" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Referrals</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-receipt-text" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Unpaid Invoices</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-file-eye-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Open Service Request</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-chart-box-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Open Surveys</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-cog" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Settings</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Contact support -->
+          <div class="d-flex flex-grow-1 align-items-end">
+            <button type="button" class="flex-grow-1 btn btn-light mt-auto align-items-center">
+              <span class="mdi mdi-help-circle-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Contact Support</span>
+            </button>
+          </div>
+      </div>
+      </nav>
+      <div class="vw-100 vh-100">
+        <header class="pt-3">
+          <div class="container-fluid p-0 border-bottom">
+            <div class="d-flex flex-wrap align-items-center justify-content-end py-4">              
+              <button class="btn btn-light me-3" type="button" id="toggleSidebarButton">
+                <span class="mdi mdi-menu" style="font-size: 18px;"></span>
+              </button>
+              <!-- content title -->
+              <div class="flex-grow-1">
+                <h4>Documents</h4>
+              </div>
+              <!-- job select -->
+              <div class="col-3 mb-3 mb-lg-0 mx-4">
+                <div class="input-group">                  
+                  <span class="input-group-text mdi mdi-briefcase-outline bg-white" id="job-addon" style="font-size: 18px;"></span>
+                  <select class="form-select" aria-label="Default select example" aria-describedby="job-addon" style="border-left: none;">
+                    <option selected>Select a job</option>
+                    <option value="1">Job A</option>
+                    <option value="2">Job B</option>
+                    <option value="3">Job C</option>
+                  </select>
+                </div>
+              </div>
+              <!-- notifications -->
+              <span class="mdi mdi-bell bg-white icon-primary" style="font-size: 24px;"></span>
+              <!-- profile -->
+              <div class="dropdown text-end mx-3">
+                <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+                  <span class="fw-bold">brubertone</span>
+                </a>
+                <ul class="dropdown-menu text-small" style="">                  
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="mdi mdi-account" style="font-size: 20px;"></span>
+                      Edit Profile
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>          
+        </header>
+        <!-- breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-chevron px-3 py-2 m-0">
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis" href="#">
+                <span class="mdi mdi-home-variant icon-primary" style="font-size: 18px;"></span>
+                <span class="visually-hidden">Home</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis fw-semibold text-decoration-none" href="#">Documents</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Data
+            </li>
+          </ol>
+        </nav>
+        <!-- content -->
+        <div id="content">
+          <!-- Documents -->
+          <div class="p-4">
+            <div class="d-flex justify-content-end mb-4">
+              <button class="btn btn-active" type="button" id="">
+                <span class="mdi mdi-upload" style="font-size: 18px;"></span>
+                Upload Document
+              </button>
+            </div>
+            <div class="table-responsibe">
+              <table class="table rounded table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <span class="text-primary">Document Name</span>
+                    </th>
+                    <th scope="col">
+                      <span class="text-primary">Description</span>
+                    </th>
+                    <th scope="col">
+                      <span class="text-primary">Folder</span>
+                    </th>
+                    <th scope="col">
+                      <span class="text-primary">Last Access</span>
+                    </th>
+                    <th scope="col">
+                      <span class="text-primary">Actions</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="p-4">
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">   
+                      </div>
+                    </th>
+                    <td>Document title</td>
+                    <td>Description</td>
+                    <td>Folder</td>
+                    <td>mm/dd/yyyy</td>
+                    <td>
+                      <a class="" href="#">
+                        <span class="mdi mdi-dots-vertical" style="font-size: 18px;"></span>                    
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>    
+    <style type="text/css">    
+    </style>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+
+        jQuery("#toggleSidebarButton").on( "click", function() {          
+          if( jQuery("#sidebar").width() > '160'){
+            jQuery("#sidebar-menu").removeClass('align-items-stretch')
+            jQuery("#sidebar").width('128px')
+          } else {
+            jQuery("#sidebar-menu").addClass('align-items-stretch');
+            jQuery("#sidebar").width('296px');
+          }
+          jQuery(".sidebar-text").toggle();
+        });
+        
+
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+  </body>
+</html>
