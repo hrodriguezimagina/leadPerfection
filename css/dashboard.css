@@ -1,24 +1,5 @@
-/* Dashboard */
 :root {
-  --background-color: #F5F5F5;
-  --primary: #FE8F01;
-  --primary-hover: #FEEEDA;
   --white: #fff;
-}
-
-#content {
-  background-color: var(--background-color);
-  min-height: calc(84vh);
-}
-
-.icon-primary {
-  color: var(--primary);
-}
-
-#sidebar {
-  /*min-width: 300px;  */
-  min-height: 100vh;
-  background: var(--white);  
 }
 
 /*customs*/
@@ -27,21 +8,57 @@
   background-color: var(--primary) !important;
 }
 
+.btn-primary {
+  color: var(--white) !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+  color: var(--white) !important;
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+}
+
+#company-logo {
+  content: var(--company-logo);
+}
+
+#content {
+  background-color: var(--content-background-color);
+  min-height: calc(84vh);
+}
+
+.icon-primary {
+  color: var(--primary);
+}
+
 .link-body-emphasis {
   color: #777 !important;
+}
+
+#sidebar {
+  min-height: 100vh;
+  background: var(--white);
 }
 
 #sidebar-menu .link-body-emphasis:hover {
   background-color: var(--primary-hover);
 }
 
-#toggleSidebarButton {
-  border-radius: 0px 8px 8px 0px;
-}
-
 .text-primary {
   color: var(--primary) !important;
 }
 
-/* Dashboard */
+.table-responsive {
+  border-radius: 10px;
+}
 
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: var(--primary-hover);
+  border-bottom-color: var(--primary);
+}
+
+#toggleSidebarButton {
+  border-radius: 0px 8px 8px 0px;
+}

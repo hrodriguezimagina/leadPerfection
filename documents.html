@@ -16,7 +16,7 @@
       <!-- Sidebar -->
       <nav id="sidebar" >
         <div class="p-4 d-flex flex-column min-vh-100">
-          <img src="./images/company-logo.png" class="img-fluid" alt="Company Logo">
+          <img id="company-logo" class="img-fluid" alt="Company Logo" src="">
           <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto pt-4 align-items-center align-items-stretch">
             <li class="nav-item">
               <a href="#" class="nav-link link-body-emphasis" aria-current="page">
@@ -69,7 +69,7 @@
             <li>
               <a href="#" class="nav-link link-body-emphasis">
                 <span class="mdi mdi-file-eye-outline" style="font-size: 20px;"></span>
-                <span class="sidebar-text">Open Service Request</span>
+                <span class="sidebar-text">Service Request</span>
               </a>
             </li>
             <li>
@@ -149,13 +149,13 @@
           <!-- Documents -->
           <div class="p-4">
             <div class="d-flex justify-content-end mb-4">
-              <button class="btn btn-active" type="button" id="">
+              <button class="btn btn-primary" type="button" id="">
                 <span class="mdi mdi-upload" style="font-size: 18px;"></span>
                 Upload Document
               </button>
             </div>
             <div class="table-responsive">
-              <table class="table table-striped table-hover table-lg">
+              <table class="table table-striped table-hover">
                 <thead>
                   <tr>
                     <th scope="col">
@@ -347,11 +347,18 @@
         </div>
       </div>
     </div>    
-    <style type="text/css">    
+    <style type="text/css">
+      /* Color vars */
+      :root {
+        --company-logo: url('../images/company-logo.png');
+        --content-background-color: #EAEDED;
+        --primary: #FE8F01;
+        --primary-hover: #D6B285;
+      }
     </style>
     <script type="text/javascript">
       $( document ).ready(function() {
-
+        /*toggle sidebar */
         jQuery("#toggleSidebarButton").on( "click", function() {          
           if( jQuery("#sidebar").width() > '160'){
             jQuery("#sidebar-menu").removeClass('align-items-stretch')
@@ -362,8 +369,6 @@
           }
           jQuery(".sidebar-text").toggle();
         });
-        
-
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
