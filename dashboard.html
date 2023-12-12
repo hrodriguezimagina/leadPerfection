@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Mulish' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/layout.css">
+    <script  src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="d-flex align-items-stretch">
+      <!-- Sidebar -->
+      <nav id="sidebar" >
+        <div class="p-4 d-flex flex-column min-vh-100 shadow">
+          <img id="company-logo" class="img-fluid" alt="Company Logo" src="">
+          <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto pt-4 align-items-center align-items-stretch">
+            <li class="nav-item">
+              <a href="#" class="nav-link btn-active" aria-current="page">
+                <span class="mdi mdi-view-dashboard" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Dashboard</span>
+              </a>
+            </li>
+            <li>              
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-account-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-note-edit-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">New Notes</span> 
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-format-list-text" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Open ToDo</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">                
+                <span class="mdi mdi-flag-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Milestones</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-file-document-outline " style="font-size: 20px;"></span>
+                <span class="sidebar-text">New Documents</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-human-greeting-proximity" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Referrals</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-receipt-text" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Unpaid Invoices</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-file-eye-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Service Request</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-chart-box-outline" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Open Surveys</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <span class="mdi mdi-cog" style="font-size: 20px;"></span>
+                <span class="sidebar-text">Settings</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Contact support -->
+          <div class="d-flex flex-grow-1 align-items-end">
+            <button type="button" class="flex-grow-1 btn btn-light mt-auto align-items-center">
+              <span class="mdi mdi-help-circle-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Contact Support</span>
+            </button>
+          </div>
+      </div>
+      </nav>
+      <div class="vw-100 vh-100">
+        <header class="pt-3">
+          <div class="container-fluid p-0 border-bottom">
+            <div class="d-flex flex-wrap align-items-center justify-content-end py-4">              
+              <button class="btn btn-light me-3" type="button" id="toggleSidebarButton">
+                <span class="mdi mdi-menu" style="font-size: 18px;"></span>
+              </button>
+              <!-- content title -->
+              <div class="flex-grow-1">
+                <h4>Dashboard</h4>
+              </div>
+              <!-- job select -->
+              <div class="col-3 mb-3 mb-lg-0 mx-4">
+                <div class="input-group">                  
+                  <span class="input-group-text mdi mdi-briefcase-outline bg-white" id="job-addon" style="font-size: 18px;"></span>
+                  <select class="form-select" aria-label="Default select example" aria-describedby="job-addon" style="border-left: none;">
+                    <option selected>Select a job</option>
+                    <option value="1">Job A</option>
+                    <option value="2">Job B</option>
+                    <option value="3">Job C</option>
+                  </select>
+                </div>
+              </div>
+              <!-- notifications -->
+              <span class="mdi mdi-bell bg-white icon-primary" style="font-size: 24px;"></span>
+              <!-- profile -->
+              <div class="dropdown text-end mx-3">
+                <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+                  <span class="fw-bold">brubertone</span>
+                </a>
+                <ul class="dropdown-menu text-small" style="">                  
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="mdi mdi-account" style="font-size: 20px;"></span>
+                      Edit Profile
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>          
+        </header>
+        <!-- breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-chevron px-3 py-2 m-0">
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis" href="#">
+                <span class="mdi mdi-home-variant icon-primary" style="font-size: 18px;"></span>
+                <span class="visually-hidden">Home</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="link-body-emphasis fw-semibold text-decoration-none" href="#">Documents</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Data
+            </li>
+          </ol>
+        </nav>
+        <!-- content -->
+        <div id="content">
+          <div class="d-flex">
+            <div class="p-2 flex-grow-1">
+              <!-- quick acces -->
+              <div>
+                <h4>Quick Access</h4>
+                <div class="custom-card">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+              <div>
+                <h4>Jobs</h4>
+                <div class="custom-card">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="p-4 flex-grow-1">
+              <!-- Personal Info -->
+              <div class="mb-5">
+                <h4>Personal Info</h4>
+                <div class="custom-card p-4">
+                  <div class="row">
+                    <div class="col-4">
+                      <div>
+                        <span class="text-bold">Bob Rubertone</span>
+                      </div>
+                      <div>
+                        <span class="text-bold">Chris Rivera</span>
+                      </div>                      
+                    </div>
+                    <div class="col-6">
+                      <div>516-759-3334 (Home)</div>
+                      <div>800-824-3527 (Work)</div>
+                      <div>brubertone@rjrtechnology.com</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <div>
+                        <span class="text-bold">Job Site</span>
+                      </div>
+                      <div>404 Glen Cove Ave</div>
+                      <div>Sea Cliff, NY 11579</div>
+                    </div>
+                    <div class="col-6">
+                      <div>
+                        <span class="text-bold">Mailing Address:</span>
+                      </div>
+                      <div>142 High Farms Rd.</div>
+                      <div>Glen Head, NY 11545</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- My Team -->
+              <div>
+                <h4>My Team</h4>
+                  <div class="table-responsive medium">
+                    <table class="table table-striped table-hover m-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">
+                            <div class="">
+                              <span class="text-primary">Photo</span>                              
+                            </div>
+                          </th>
+                          <th scope="col">
+                            <span class="text-primary">Name</span>
+                          </th>
+                          <th scope="col">
+                            <span class="text-primary">Department</span>
+                          </th>
+                          <th scope="col">
+                            <span class="text-primary">Phone Number</span>
+                          </th>
+                          <th scope="col">
+                            <span class="text-primary">Email</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div>
+                              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+                            </div>
+                          </th>
+                          <td><span class="text-bold">Vince</span></td>
+                          <td><span>Sales Rep</span></td>
+                          <td><span>914-555-1212</span></td>
+                          <td><span>vince@myhome.com</span></td>                          
+                        </tr>
+                        <tr>
+                          <td>
+                            <div>
+                              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+                            </div>
+                          </th>
+                          <td><span class="text-bold">Vince</span></td>
+                          <td><span>Sales Rep</span></td>
+                          <td><span>914-555-1212</span></td>
+                          <td><span>vince@myhome.com</span></td>                          
+                        </tr>
+                        <tr>
+                          <td>
+                            <div>
+                              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+                            </div>
+                          </th>
+                          <td><span class="text-bold">Vince</span></td>
+                          <td><span>Sales Rep</span></td>
+                          <td><span>914-555-1212</span></td>
+                          <td><span>vince@myhome.com</span></td>                          
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <style type="text/css">
+      /* Color vars */
+      :root {
+        --company-logo: url('../images/company-logo.png');
+        --content-background-color: #EAEDED;
+        --primary: #FE8F01;
+        --primary-hover: #D6B285;
+      }
+    </style>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        /* Toggle sidebar */
+        let sidebarIsExpanded = true;
+        
+        jQuery("#toggleSidebarButton").on( "click", function() {
+          sidebarIsExpanded ? collapseSidebar() : expandSidebar();
+        });
+
+        function collapseSidebar(){
+          jQuery("#sidebar-menu").removeClass('align-items-stretch');
+          jQuery("#sidebar").width('128px');
+          jQuery(".sidebar-text").hide();
+          sidebarIsExpanded = false;
+        }
+
+        function expandSidebar(){
+          jQuery("#sidebar-menu").addClass('align-items-stretch');
+          jQuery("#sidebar").width('296px');
+          jQuery(".sidebar-text").show();
+          sidebarIsExpanded = true;
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+  </body>
+</html>
