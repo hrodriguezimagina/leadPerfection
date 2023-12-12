@@ -62,6 +62,29 @@ body {
   color: var(--black-black-70);
 }
 
+
+/* red timer-sand */
+.color-urgent {
+  color: #D83232;
+}
+
+/* orange timer-sand */
+.color-important {
+  color: #EFB008;
+}
+
+/* blue timer-sand */
+.color-standar {
+  color: #41ADD1;
+}
+
+/* gray timer-sand */
+.color-no-rush {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+
 .link-body-emphasis {
   color: #777 !important;
 }
