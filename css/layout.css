@@ -127,3 +127,23 @@ body {
 #toggleSidebarButton {
   border-radius: 0px 8px 8px 0px;
 }
+
+
+.nav-underline .nav-link:focus, .nav-underline .nav-link:hover {
+  border-bottom-color: var(--primary-hover);
+}
+
+/*
+.nav-underline .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom: var(--bs-nav-underline-border-width) solid transparent;
+}
+*/
+.nav-link:focus, .nav-link:hover {
+    color: var(--primary-hover);
+}
+
+.nav-link, .nav-link {
+    color: #777777;
+}
