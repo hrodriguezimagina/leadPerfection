@@ -147,3 +147,46 @@ body {
 .nav-link, .nav-link {
     color: #777777;
 }
+
+.job-icon-wallet {
+  background-color: rgba(49, 134, 233, 0.25);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+
+.job-icon-wallet .mdi {
+  font-size: 45px;
+  color: #3186E9;
+}
+
+.job-icon-unbalanced {
+  background-color: rgba(239, 187, 0, 0.25);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+
+.job-icon-unbalanced .mdi {
+  font-size: 45px;
+  color: #EFBB00;
+}
+
+.job-icon-cash {
+  background-color: rgba(93, 176, 43, 0.25);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+
+.job-icon-cash .mdi {
+  font-size: 45px;
+  color: #5DB02B;
+}
+
+
+
+
