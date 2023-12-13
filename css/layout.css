@@ -148,11 +148,11 @@ body {
 }
 
 .nav-link:focus, .nav-link:hover {
-    color: var(--primary-hover);
+  color: var(--primary-hover);
 }
 
 .nav-link, .nav-link {
-    color: #777777;
+  color: #777777;
 }
 
 .job-icon-wallet {
