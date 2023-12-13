@@ -41,8 +41,13 @@ body {
 }
 
 #content {
+  background-color: var(--content-background-color);  
+}
+
+
+#main {
   background-color: var(--content-background-color);
-  min-height: calc(84vh);
+  height: 100%;
 }
 
 .white-card {
@@ -89,9 +94,17 @@ body {
   color: #777 !important;
 }
 
-#sidebar {
-  min-height: 100vh;
+#sidebar {  
   background: var(--white);
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+#main {
+  background-color: var(--);
 }
 
 #sidebar-menu .link-body-emphasis:hover {
