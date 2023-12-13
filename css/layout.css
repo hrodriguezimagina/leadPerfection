@@ -195,7 +195,17 @@ body {
 }
 
 
-
+.change-order-button {
+  color: #32B4EC;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%; /* 12.1px */
+  letter-spacing: 0.33px;
+  text-transform: uppercase;
+}
 
 .custom-file-upload {
     border: 1px solid #ccc;
