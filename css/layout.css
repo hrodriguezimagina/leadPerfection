@@ -170,7 +170,7 @@ body {
 }
 
 .job-icon-wallet .mdi {
-  font-size: 45px;
+  font-size: 32px;
   color: #3186E9;
 }
 
@@ -183,7 +183,7 @@ body {
 }
 
 .job-icon-unbalanced .mdi {
-  font-size: 45px;
+  font-size: 32px;
   color: #EFBB00;
 }
 
@@ -196,7 +196,7 @@ body {
 }
 
 .job-icon-cash .mdi {
-  font-size: 45px;
+  font-size: 32px;
   color: #5DB02B;
 }
 
