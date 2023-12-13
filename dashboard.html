@@ -169,62 +169,62 @@
                   <h5>Quick Access</h5>
                 </div>
                 <div class="row row-cols-2">
-                    <!-- new notes -->
-                    <div class="col">
-                      <div class="white-card mb-3 p-2 d-flex flex-column align-items-center justify-content-center">
-                        <h4>
-                          <span class="mdi mdi-note-edit-outline icon-primary" style="font-size: 45px;"></span>
-                        </h4>
-                        <div>
-                          <h4>New Notes</h4>
-                        </div>
-                        <div>
-                          <span>Lorem ipsum dolor sit amet adipiscing</span>
-                        </div>
+                  <!-- new notes -->
+                  <div class="col">
+                    <div class="white-card mb-3 p-2 d-flex flex-column align-items-center justify-content-center">
+                      <h4>
+                        <span class="mdi mdi-note-edit-outline icon-primary" style="font-size: 45px;"></span>
+                      </h4>
+                      <div>
+                        <h4>New Notes</h4>
+                      </div>
+                      <div>
+                        <span>Lorem ipsum dolor sit amet adipiscing</span>
                       </div>
                     </div>
-                    <!-- open to-do -->
-                    <div class="col">
-                      <div class="white-card mb-3 p-2 d-flex flex-column align-items-center justify-content-center">
-                        <h4>
-                          <span class="mdi mdi-format-list-text icon-primary" style="font-size: 45px;"></span>
-                        </h4>
-                        <div>
-                          <h4>Open ToDo</h4>
-                        </div>
-                        <div>
-                          <span>Lorem ipsum dolor sit amet adipiscing</span>
-                        </div>
+                  </div>
+                  <!-- open to-do -->
+                  <div class="col">
+                    <div class="white-card mb-3 p-2 d-flex flex-column align-items-center justify-content-center">
+                      <h4>
+                        <span class="mdi mdi-format-list-text icon-primary" style="font-size: 45px;"></span>
+                      </h4>
+                      <div>
+                        <h4>Open ToDo</h4>
+                      </div>
+                      <div>
+                        <span>Lorem ipsum dolor sit amet adipiscing</span>
                       </div>
                     </div>
-                    <!-- New Documents -->
-                    <div class="col">
-                      <div class="white-card mb-2 p-2 d-flex flex-column align-items-center justify-content-center">
-                        <h4>
-                          <span class="mdi mdi-note-edit-outline icon-primary" style="font-size: 45px;"></span>
-                        </h4>
-                        <div>
-                          <h4>New Documents</h4>
-                        </div>
-                        <div>
-                          <span>Lorem ipsum dolor sit amet adipiscing</span>
-                        </div>
+                  </div>
+                  <!-- New Documents -->
+                  <div class="col">
+                    <div class="white-card mb-2 p-2 d-flex flex-column align-items-center justify-content-center">
+                      <h4>
+                        <span class="mdi mdi-note-edit-outline icon-primary" style="font-size: 45px;"></span>
+                      </h4>
+                      <div>
+                        <h4>New Documents</h4>
+                      </div>
+                      <div>
+                        <span>Lorem ipsum dolor sit amet adipiscing</span>
                       </div>
                     </div>
-                    <!-- Referrals -->
-                    <div class="col">
-                      <div class="white-card mb-3 p-2 d-flex flex-column align-items-center justify-content-center">
-                        <h4>
-                          <span class="mdi mdi-human-greeting-proximity icon-primary" style="font-size: 45px;"></span>
-                        </h4>
-                        <div>
-                          <h4>New Referrals</h4>
-                        </div>
-                        <div>
-                          <span>Lorem ipsum dolor sit amet adipiscing</span>
-                        </div>
+                  </div>
+                  <!-- Referrals -->
+                  <div class="col">
+                    <div class="white-card mb-3 p-2 d-flex flex-column align-items-center justify-content-center">
+                      <h4>
+                        <span class="mdi mdi-human-greeting-proximity icon-primary" style="font-size: 45px;"></span>
+                      </h4>
+                      <div>
+                        <h4>New Referrals</h4>
                       </div>
-                    </div>                    
+                      <div>
+                        <span>Lorem ipsum dolor sit amet adipiscing</span>
+                      </div>
+                    </div>
+                  </div>                    
                 </div>                
               </div>
               <!-- Jobs -->
@@ -414,8 +414,7 @@
     <style type="text/css">
       /* Color vars */
       :root {
-        --company-logo: url('../images/company-logo.png');
-        --content-background-color: #EAEDED;
+        --company-logo: url('../images/company-logo.png');        
         --primary: #FE8F01;
         --primary-hover: #D6B285;
       }
@@ -424,6 +423,8 @@
       $( document ).ready(function() {
         /* Toggle sidebar */
         let sidebarIsExpanded = false;
+        const sidebarCollapsedWidth = '128px';
+        const sidebarExpandedWidth = '256px';
 
         sidebarIsExpanded ? collapseSidebar() : expandSidebar();
         
@@ -433,18 +434,17 @@
 
         function collapseSidebar(){
           jQuery("#sidebar-menu").removeClass('align-items-stretch');
-          jQuery("#sidebar").width('128px');
+          jQuery("#sidebar").width(sidebarCollapsedWidth);
           jQuery(".sidebar-text").hide();
-          jQuery("#main").css("margin-left", "128px");
-
+          jQuery("#main").css("margin-left", sidebarCollapsedWidth);
           sidebarIsExpanded = false;
         }
 
         function expandSidebar(){
           jQuery("#sidebar-menu").addClass('align-items-stretch');
-          jQuery("#sidebar").width('256px');
+          jQuery("#sidebar").width(sidebarExpandedWidth);
           jQuery(".sidebar-text").show();
-          jQuery("#main").css("margin-left", "256px");
+          jQuery("#main").css("margin-left", sidebarExpandedWidth);
           sidebarIsExpanded = true;
         }
       });
