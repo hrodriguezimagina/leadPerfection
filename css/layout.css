@@ -104,10 +104,6 @@ body {
   left: 0;
 }
 
-#main {
-  background-color: var(--);
-}
-
 #sidebar-menu .link-body-emphasis:hover {
   background-color: var(--primary-hover);
 }

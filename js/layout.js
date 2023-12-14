@@ -1,52 +1,55 @@
 $( document ).ready(function() {
   /* Toggle sidebar */
+  const mdBreakpoint = 576 // 576px bootstrap md breakpoint
   let sidebarIsExpanded = false;
-  let sidebarCollapsedWidth;
-  let sidebarExpandedWidth;
+  let sidebarCollapsedWidth = '128px';
+  let sidebarExpandedWidth = '256px';
 
-  sidebarIsExpanded ? collapseSidebar() : expandSidebar();
+  isMobile() ? collapseSidebar() : expandSidebar();
+
 
   jQuery(window).resize(function(){
-    checkWidth();
-    resizeSidebar();
+    isMobile() ? collapseSidebar() : expandSidebar();
   });
 
-  jQuery("#toggleSidebarButton").on( "click", function() {
+  jQuery(".toggleSidebarButton").on( "click", function() {
     sidebarIsExpanded ? collapseSidebar() : expandSidebar();
-  });
+  }); 
+  
 
-  function checkWidth(){
-    const windowsize = jQuery(window).width();
-    if (windowsize > 576 ) { //sm breakpoint
-      sidebarCollapsedWidth = '128px';
-      sidebarExpandedWidth = '256px';
-    } else {
-      sidebarCollapsedWidth = '64px';
-      sidebarExpandedWidth = '140px';
-    }
+  function isMobile(){
+    return (jQuery(window).width() < mdBreakpoint);
   }
 
-  function resizeSidebar(){
-    !sidebarIsExpanded ? collapseSidebar() : expandSidebar();
-  }
 
   function collapseSidebar(){
-    checkWidth();
-    jQuery("#sidebar-menu").removeClass('align-items-stretch');
-    jQuery("#sidebar").width(sidebarCollapsedWidth);
-    jQuery(".sidebar-text").hide();
-    //jQuery("header").css("margin-left", sidebarCollapsedWidth);
-    jQuery("#main").css("margin-left", sidebarCollapsedWidth);
+    if (isMobile()) { 
+      jQuery('#sidebar').hide();
+      jQuery("#main").css("margin-left", '0px');
+    } else {
+      jQuery('#closeSidebarButton').hide();
+      jQuery("#sidebar").width(sidebarCollapsedWidth);
+      jQuery("#sidebar-menu").removeClass('align-items-stretch');      
+      jQuery(".sidebar-text").hide();
+      //jQuery("header").css("margin-left", sidebarCollapsedWidth);
+      jQuery("#main").css("margin-left", sidebarCollapsedWidth);
+    }
     sidebarIsExpanded = false;
   }
 
   function expandSidebar(){
-    checkWidth();
-    jQuery("#sidebar-menu").addClass('align-items-stretch');
-    jQuery("#sidebar").width(sidebarExpandedWidth);
-    jQuery(".sidebar-text").show();
-    //jQuery("#header").css("margin-left", sidebarExpandedWidth);
-    jQuery("#main").css("margin-left", sidebarExpandedWidth);
+    jQuery('#sidebar').show();
+    if (isMobile()) { 
+      jQuery('#closeSidebarButton').show();
+    } else {
+      jQuery('#closeSidebarButton').hide();
+      jQuery('#sidebar').show();
+      jQuery("#sidebar").width(sidebarExpandedWidth);      
+      jQuery("#sidebar-menu").addClass('align-items-stretch');      
+      jQuery(".sidebar-text").show();
+      //jQuery("#header").css("margin-left", sidebarExpandedWidth);
+      jQuery("#main").css("margin-left", sidebarExpandedWidth);
+    }
     sidebarIsExpanded = true;
   }
 });
