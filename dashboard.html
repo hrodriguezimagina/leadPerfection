@@ -13,12 +13,11 @@
   </head>
   <body>    
     <!-- Sidebar -->
-    <div id="sidebar">      
+    <div id="sidebar" class="">
       <div  class="p-4 d-flex flex-column min-vh-100 shadow">
         <!-- close sidebar button -->
         <div>
-          <button class="toggleSidebarButton btn btn-light" id="closeSidebarButton" type="button" id="">
-            <span class="mdi mdi-close" style="font-size: 18px;"></span>
+          <button type="button" class="toggleSidebarButton btn-close" id="closeSidebarButton">
           </button>
         </div>
         <!-- company logo -->
@@ -160,7 +159,7 @@
           </div>
         </div>
         <!-- breadcrumb -->
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" class="d-none d-md-block">
           <ol class="breadcrumb breadcrumb-chevron px-3 py-2 m-0">
             <li class="breadcrumb-item">
               <a class="link-body-emphasis" href="#">
@@ -438,7 +437,7 @@
     <!-- add profile photo Modal -->
     <div class="modal fade" id="addProfilePhoto" tabindex="-1" aria-labelledby="addProfilePhoto" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="width: 370px">
+        <div class="modal-content">
           <div class="modal-header border-0">
             <h1 class="modal-title fs-5 text-bold" id="exampleModalLabel">Add Profile photo</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -467,7 +466,7 @@
     <!-- change profile photo Modal -->
     <div class="modal fade" id="changeProfilePhoto" tabindex="-1" aria-labelledby="changeProfilePhoto" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="width: 370px">
+        <div class="modal-content">
           <div class="modal-header border-0">
             <h1 class="modal-title fs-5 text-bold" id="exampleModalLabel">Change Profile photo</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
