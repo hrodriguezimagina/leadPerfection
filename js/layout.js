@@ -1,6 +1,7 @@
 $( document ).ready(function() {
   /* Toggle sidebar */
-  const mdBreakpoint = 576 // 576px bootstrap md breakpoint
+  const smBreakpoint = 576 // 576px bootstrap sm breakpoint
+  const mdBreakpoint = 768 // 768px bootstrap md breakpoint
   let sidebarIsExpanded = true;
   let sidebarCollapsedWidth = '128px';
   let sidebarExpandedWidth = '256px';
@@ -8,7 +9,7 @@ $( document ).ready(function() {
   init();
   
   jQuery(window).resize(function(){
-    init();
+   init();
   });
 
   jQuery(".toggleSidebarButton").on( "click", function() {
@@ -18,7 +19,7 @@ $( document ).ready(function() {
 
   function init(){
     setHeader();
-    isMobile() ? collapseSidebar() : expandSidebar();
+    jQuery(window).width() > mdBreakpoint ? expandSidebar() : collapseSidebar();
   }
   
   function setHeader(){
@@ -26,7 +27,7 @@ $( document ).ready(function() {
   }
 
   function isMobile(){
-    return (jQuery(window).width() < mdBreakpoint);
+    return (jQuery(window).width() < smBreakpoint);
   }  
 
   function collapseSidebar(){
@@ -34,6 +35,7 @@ $( document ).ready(function() {
       jQuery('#sidebar').hide();      
       jQuery("#main").css("margin-left", '0px');      
     } else {
+      jQuery('#sidebar').show();
       jQuery(".sidebar-text").hide();
       jQuery('#closeSidebarButton').hide();
       jQuery("#sidebar").width(sidebarCollapsedWidth);
@@ -44,15 +46,15 @@ $( document ).ready(function() {
   }
 
   function expandSidebar(){    
-    if (isMobile()) { 
-      jQuery('#closeSidebarButton').show();
-    } else {
-      jQuery('#closeSidebarButton').hide();      
-      jQuery("#sidebar").width(sidebarExpandedWidth);      
-      jQuery("#sidebar-menu").addClass('align-items-stretch');      
-      jQuery(".sidebar-text").show();      
+    if (isMobile()){
+      jQuery('#closeSidebarButton').show() 
+    } else {      
+      jQuery('#closeSidebarButton').hide();
       jQuery("#main").css("margin-left", sidebarExpandedWidth);
     }
+    jQuery("#sidebar").width(sidebarExpandedWidth);      
+    jQuery("#sidebar-menu").addClass('align-items-stretch');      
+    jQuery(".sidebar-text").show();    
     jQuery('#sidebar').show();
     sidebarIsExpanded = true;
   }
