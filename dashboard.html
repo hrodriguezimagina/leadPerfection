@@ -23,7 +23,7 @@
         <!-- company logo -->
         <div>
           <img id="company-logo" class="img-fluid" alt="Company Logo" src="">
-        </div>        
+        </div>
         <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto pt-4 align-items-center align-items-stretch">
           <li class="nav-item">
             <a href="#" class="nav-link btn-active" aria-current="page">
@@ -31,7 +31,7 @@
               <span class="sidebar-text">Dashboard</span>
             </a>
           </li>
-          <li>              
+          <li>
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-account-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">My Profile</span>
@@ -50,7 +50,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link link-body-emphasis">                
+            <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-flag-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Milestones</span>
             </a>
@@ -104,21 +104,21 @@
     <!-- main -->      
     <div id="main" class="vh-100">
       <!-- header -->
-      <header id="header" class="pt-3 bg-white">
+      <header id="header" class="pt-md-3 bg-white">
         <div class="container-fluid p-0 border-bottom">
-          <div class="d-flex flex-wrap align-items-center justify-content-md-end justify-content-center py-4">              
-            <div class="me-3">
+          <div class="d-flex flex-wrap align-items-center justify-content-end py-md-4">
+            <div class="m-2 ms-sm-0">
               <button class="toggleSidebarButton btn btn-light" type="button" id="">
                 <span class="mdi mdi-menu" style="font-size: 18px;"></span>
               </button>
-            </div>            
+            </div>
             <!-- content title -->
             <div class="flex-grow-1">
               <h4>Dashboard</h4>
             </div>
             <!-- job select -->
-            <div class="col-10 col-md-3 mb-3 mb-lg-0 mx-4">
-              <div class="input-group">                  
+            <div class="me-2 d-none d-md-block">
+              <div class="input-group">
                 <span class="input-group-text mdi mdi-briefcase-outline bg-white" id="job-addon" style="font-size: 18px;"></span>
                 <select class="form-select" aria-label="Default select example" aria-describedby="job-addon" style="border-left: none;">
                   <option selected>Select a job</option>
@@ -129,27 +129,36 @@
               </div>
             </div>
             <!-- notifications -->
-            <span class="mdi mdi-bell bg-white icon-primary" style="font-size: 24px;"></span>
+            <div>
+              <span class="mdi mdi-bell bg-white icon-primary" style="font-size: 24px;"></span>
+            </div>
             <!-- profile -->
-            <!--  trigger changeProfilePhoto modal-->
-            <a href="#" class="mx-3" data-bs-toggle="modal" data-bs-target="#changeProfilePhoto" >
-              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
-            </a>
-            <div class="dropdown text-end me-3">              
-              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="dropdown text-end me-3">
+              <a href="#" class="link-body-emphasis text-decoration-none dropdown-toggle d-none d-md-block" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
                 <span class="fw-bold">brubertone</span>
               </a>
-              <ul class="dropdown-menu text-small" style="">                  
+              <a href="#" class="d-md-none link-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+              </a>
+
+              <ul class="dropdown-menu text-small" style="">
                 <li>
                   <a class="dropdown-item" href="#">
                     <span class="mdi mdi-account" style="font-size: 20px;"></span>
                     Edit Profile
                   </a>
-                </li>                
+                </li>
                 <li>
                   <!-- trigger addProfilePhoto modal -->
                   <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addProfilePhoto">
                     Add Profile photo
+                  </a>
+                </li>
+                <li>
+                  <!-- trigger changeProfilePhoto modal -->
+                  <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changeProfilePhoto">
+                    Change Profile photo
                   </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
@@ -159,19 +168,25 @@
           </div>
         </div>
         <!-- breadcrumb -->
-        <nav aria-label="breadcrumb" class="d-none d-md-block">
-          <ol class="breadcrumb breadcrumb-chevron px-3 py-2 m-0">
+        <nav aria-label="breadcrumb" class="">
+          <ol class="breadcrumb breadcrumb-chevron px-3 py-2 m-0 d-flex align-items-center">
             <li class="breadcrumb-item">
               <a class="link-body-emphasis" href="#">
                 <span class="mdi mdi-home-variant icon-primary" style="font-size: 18px;"></span>
                 <span class="visually-hidden">Home</span>
               </a>
             </li>
-            <li class="breadcrumb-item">
+            <li class="breadcrumb-item active" aria-current="page">
               <a class="link-body-emphasis fw-semibold text-decoration-none" href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              Data
+            <li class="d-block d-md-none flex-grow-1 ps-5">
+              <!-- job select mobile only -->
+                <select class="form-select flex-grow-1" aria-label="Default select example" aria-describedby="job-addon">
+                  <option selected>Select a job</option>
+                  <option value="1">Job A</option>
+                  <option value="2">Job B</option>
+                  <option value="3">Job C</option>
+                </select>
             </li>
           </ol>
         </nav>
@@ -186,7 +201,7 @@
                 <div class="py-3">
                   <h5>Quick Access</h5>
                 </div>
-                <div class="row row-cols-2">
+                <div class="row row-cols-sm-2 row-cols-1">
                   <!-- new notes -->
                   <div class="col">
                     <div class="white-card mb-3 p-2 d-flex flex-column align-items-center justify-content-center">
@@ -242,8 +257,8 @@
                         <span>Lorem ipsum dolor sit amet adipiscing</span>
                       </div>
                     </div>
-                  </div>                    
-                </div>                
+                  </div>
+                </div>
               </div>
               <!-- Jobs -->
               <div class="px-3">
@@ -252,11 +267,11 @@
                 </div>
                 <div class="white-card p-4">
                   <div class="row">
-                    <div class="col-12 col-md-8">
+                    <div class="col-8 col-md-8">
                       <div>
                         <h5>Product Name</h5>
                       </div>
-                      <div class="my-4">                          
+                      <div class="my-4">
                         <span class="p-2" style="border-radius: 30px; border-style: solid; color: #999;">
                           <span class="mdi mdi-clock-outline"></span>
                           JOB #12345
@@ -275,7 +290,7 @@
                         </span>
                       </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-4 col-md-4">
                       <div class="d-flex align-items-center justify-content-end">
                         <button type="button" class="btn change-order-button">
                           <span class="mdi mdi-open-in-new" style="font-size: 16px"></span>
@@ -292,7 +307,7 @@
                         </div>
                         <div class="d-flex flex-column">
                           <span>Gross Amount</span>
-                          <span class="text-bold">$0000</span>                            
+                          <span class="text-bold">$0000</span>
                         </div>
                       </div>
                     </div>
@@ -303,7 +318,7 @@
                         </div>
                         <div class="d-flex flex-column">
                           <span>Balance Amount</span>
-                          <span class="text-bold">$0000</span>                            
+                          <span class="text-bold">$0000</span>
                         </div>
                       </div>
                     </div>
@@ -314,7 +329,7 @@
                         </div>
                         <div class="d-flex flex-column">
                           <span>Total</span>
-                          <span class="text-bold">$0000</span>                            
+                          <span class="text-bold">$0000</span>
                         </div>
                       </div>
                     </div>
@@ -325,7 +340,7 @@
             <div class="col-12 col-lg-6">
               <!-- Personal Info -->
               <div class="px-3 mt-3">
-                <div class="py-3">                  
+                <div class="py-3">
                   <h5>Personal Info</h5>
                 </div>
                 <div class="white-card p-4">
@@ -336,7 +351,7 @@
                       </div>
                       <div>
                         <span class="text-bold">Chris Rivera</span>
-                      </div>                      
+                      </div>
                     </div>
                     <div class="col-12 col-sm-8">
                       <div>516-759-3334 (Home)</div>
