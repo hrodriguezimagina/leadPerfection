@@ -1,10 +1,10 @@
 $( document ).ready(function() {
   /* Toggle sidebar */
   const smBreakpoint = 576 // 576px bootstrap sm breakpoint
-  const mdBreakpoint = 768 // 768px bootstrap md breakpoint
+  const mdBreakpoint = 992 // 768px bootstrap md breakpoint
+  const sidebarCollapsedWidth = '128px';
+  const sidebarExpandedWidth = '256px';
   let sidebarIsExpanded = true;
-  let sidebarCollapsedWidth = '128px';
-  let sidebarExpandedWidth = '256px';
 
   init();
   
@@ -23,7 +23,14 @@ $( document ).ready(function() {
   }
   
   function setHeader(){
-    isMobile() ? jQuery("#header").addClass('fixed-top') : jQuery("#header").removeClass('fixed-top');
+    if (isMobile()){
+      jQuery("#header").addClass('fixed-top');
+      const marginTop = jQuery('#header').height() + 8;
+      jQuery("#content").css("margin-top", marginTop + 'px');
+    } else {
+      jQuery("#header").removeClass('fixed-top');
+      jQuery("#content").css("margin-top", '0px');
+    }
   }
 
   function isMobile(){
