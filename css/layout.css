@@ -195,7 +195,7 @@ body {
   line-height: 18px; /* 128.571% */
 }
 
-#toggleSidebarButton {
+#toggle-sidebar-button {
   border-radius: 0px 8px 8px 0px;
 }
 
@@ -207,10 +207,10 @@ body {
 
 /* date picker custom css*/
 #datepicker-container {
-  display: block;
   position: absolute;  
   z-index: 1000;
   background-color: #fff;
+  width: fit-content;
 }
 
 .ui-state-default, .ui-widget.ui-widget-content,  .ui-widget.ui-widget-content{
@@ -226,20 +226,24 @@ body {
 
 .date-picker-prev, .date-picker-next {
  font-size: 24px;
- 
- 
 }
 
 .date-picker-prev:hover, .date-picker-next:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 /*active */
-.ui-state-default {
-  color: #fff;
+.ui-state-highlight {
+  color: #fff !important;
+  background: #777 !important
 }
-
+.ui-state-default {
+  border-radius: 16px;
+}
 .ui-state-active {
   background-color: var(--primary) !important;
+  border-radius: 16px;
 }
-
+.ui-datepicker {  
+  width: 300px !important;
+}
  

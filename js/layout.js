@@ -6,41 +6,22 @@ $( document ).ready(function() {
   const sidebarExpandedWidth = '256px';
   let sidebarIsExpanded = true;
 
-  //datepicker
+  // stores the selected date
   let selectedDate;
 
   init();
+  configDatepicker()
   
   jQuery(window).resize(function(){
    init();
   });
 
-  jQuery(".toggleSidebarButton").on( "click", function() {
+  jQuery(".toggle-sidebar-button").on( "click", function() {
     sidebarIsExpanded ? collapseSidebar() : expandSidebar();
-  });
-
- 
- /* datepicker */
- jQuery('#datepicker-button').on("click", function (e) {
-  jQuery('#datepicker-container').toggle()
- }) 
- /* datepicker */
- jQuery('#datepicker-save-button').on("click", function (e) {
-  jQuery('#datepicker-container').hide()
- }) 
-    
+  }); 
 
   function init(){
     setHeader();
-    //init and hide datepicker
-    jQuery("#datepicker").datepicker({
-      autoSize: true,
-      firstDay: 1, // Start with Monday
-      onSelect: function(date, obj){
-        selectedDate = date
-      }
-    })
-    jQuery('#datepicker-container').hide();
     jQuery(window).width() > mdBreakpoint ? expandSidebar() : collapseSidebar();
   }
   
@@ -66,7 +47,7 @@ $( document ).ready(function() {
     } else {
       jQuery('#sidebar').show();
       jQuery(".sidebar-text").hide();
-      jQuery('#closeSidebarButton').hide();
+      jQuery('#close-sidebar-button').hide();
       jQuery("#sidebar").width(sidebarCollapsedWidth);
       jQuery("#sidebar-menu").removeClass('align-items-stretch');
       jQuery("#main").css("margin-left", sidebarCollapsedWidth);
@@ -76,9 +57,9 @@ $( document ).ready(function() {
 
   function expandSidebar(){    
     if (isMobile()){
-      jQuery('#closeSidebarButton').show() 
+      jQuery('#close-sidebar-button').show() 
     } else {      
-      jQuery('#closeSidebarButton').hide();
+      jQuery('#close-sidebar-button').hide();
       jQuery("#main").css("margin-left", sidebarExpandedWidth);
     }
     jQuery("#sidebar").width(sidebarExpandedWidth);      
@@ -86,5 +67,27 @@ $( document ).ready(function() {
     jQuery(".sidebar-text").show();    
     jQuery('#sidebar').show();
     sidebarIsExpanded = true;
+  }
+
+  /* jquery datepicker */
+  function configDatepicker(){  
+    const datePickerContainer = jQuery('#datepicker-container');
+    // init and hide datepicker
+    jQuery("#datepicker").datepicker({
+      autoSize: true,
+      firstDay: 1, // Start with Monday, 
+      dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
+      onSelect: function(date, obj){
+        selectedDate = date
+      }
+    });
+    datePickerContainer.hide();
+    
+    jQuery('#datepicker-button').on("click", function (e) {
+      datePickerContainer.toggle();
+    });    
+    jQuery('#datepicker-save-button').on("click", function (e) {
+      datePickerContainer.hide();
+    });
   }
 });
