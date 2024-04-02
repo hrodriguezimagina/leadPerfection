@@ -34,6 +34,8 @@ $( document ).ready(function() {
     setHeader();
     //init and hide datepicker
     jQuery("#datepicker").datepicker({
+      autoSize: true,
+      firstDay: 1, // Start with Monday
       onSelect: function(date, obj){
         selectedDate = date
       }
