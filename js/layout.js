@@ -76,7 +76,7 @@ $( document ).ready(function() {
     jQuery("#datepicker").datepicker({
       autoSize: true,
       firstDay: 1, // Start with Monday, 
-      dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
+      dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
       onSelect: function(date, obj){
         selectedDate = date
       }

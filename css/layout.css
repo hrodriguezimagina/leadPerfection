@@ -237,11 +237,11 @@ body {
   background: #777 !important
 }
 .ui-state-default {
-  border-radius: 16px;
+  border-radius: 50%;
 }
 .ui-state-active {
   background-color: var(--primary) !important;
-  border-radius: 16px;
+  border-radius: 50%;
 }
 .ui-datepicker {  
   width: 300px !important;
