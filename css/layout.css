@@ -203,3 +203,41 @@ body {
   background-color: var(--white);
   border-radius: 10px;
 }
+
+
+/* date picker custom css*/
+#datepicker-container {
+  display: flex;
+  position: absolute;  
+  z-index: 1000;
+  background-color: #fff;
+  
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  
+}
+
+.ui-state-default, .ui-widget.ui-widget-content,  .ui-widget.ui-widget-content{
+  border: 1px solid #fff !important;
+}
+
+.ui-widget-header {
+  border: 1px solid #fff !important;
+  background: #fff !important;
+  color: #333333;
+  font-weight: bold;
+}
+
+.date-picker-prev, .date-picker-next {
+ font-size: 24px;
+ border-radius: 4px;
+ padding: 3px;
+ background-color: rgba(0, 0, 0, 0.1);
+}
+
+.date-picker-prev:hover, .date-picker-next:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+ 

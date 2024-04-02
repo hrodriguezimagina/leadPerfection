@@ -11,10 +11,8 @@
     <link rel="stylesheet" href="./css/layout.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="  crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-ui.js"></script>
   </head>
   <body>    
     <!-- Sidebar -->
@@ -275,14 +273,20 @@
                   <button class="btn btn-light icon-black-30 bg-white border-0">
                     <span class="mdi mdi-account-group" style="font-size: 18px;"></span>
                   </button>
-                  <div class="btn-group icon-black-30 bg-white border-0">
-                      <button type="button" class="btn btn-light icon-black-30" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" />
-                        <span class="mdi mdi-calendar-clock" style="font-size: 18px;"></span>
+                  <!-- datepicker -->
+                  <button type="button" class="btn btn-light icon-black-30" id="datepicker-button"/>
+                    <span class="mdi mdi-calendar-clock" style="font-size: 18px;"></span>
+                  </button>
+                  <div id="datepicker-container" class="card p-2">
+                    <div id="datepicker">
+                    </div>
+                    <div class="d-grid gap-2">
+                      <button type="button" class="btn btn-primary" id="datepicker-save-button"/>                    
+                        Save
                       </button>
-                      <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" id="datepicker">
-                        
-                      </div>
+                    </div>
                   </div>
+                  <!-- datepicker -->
                     
                   </button>
                   <button class="btn btn-light icon-black-30 bg-white border-0">

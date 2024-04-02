@@ -6,6 +6,9 @@ $( document ).ready(function() {
   const sidebarExpandedWidth = '256px';
   let sidebarIsExpanded = true;
 
+  //datepicker
+  let selectedDate;
+
   init();
   
   jQuery(window).resize(function(){
@@ -16,21 +19,26 @@ $( document ).ready(function() {
     sidebarIsExpanded ? collapseSidebar() : expandSidebar();
   });
 
-  
-  /*
- jQuery('.dropdown-toggle').on("click", function (e) {
-  e.stopPropagation();  
-  console.log('hello')
-  jQuery('.dropdown-toggle').dropdown()
+ 
+ /* datepicker */
+ jQuery('#datepicker-button').on("click", function (e) {
+  jQuery('#datepicker-container').toggle()
  }) 
- */    
-
-  
-
+ /* datepicker */
+ jQuery('#datepicker-save-button').on("click", function (e) {
+  jQuery('#datepicker-container').hide()
+ }) 
+    
 
   function init(){
     setHeader();
-    jQuery("#datepicker").datepicker()
+    //init and hide datepicker
+    jQuery("#datepicker").datepicker({
+      onSelect: function(date, obj){
+        selectedDate = date
+      }
+    })
+    jQuery('#datepicker-container').hide();
     jQuery(window).width() > mdBreakpoint ? expandSidebar() : collapseSidebar();
   }
   
