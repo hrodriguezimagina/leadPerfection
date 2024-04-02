@@ -16,9 +16,21 @@ $( document ).ready(function() {
     sidebarIsExpanded ? collapseSidebar() : expandSidebar();
   });
 
+  
+  /*
+ jQuery('.dropdown-toggle').on("click", function (e) {
+  e.stopPropagation();  
+  console.log('hello')
+  jQuery('.dropdown-toggle').dropdown()
+ }) 
+ */    
+
+  
+
 
   function init(){
     setHeader();
+    jQuery("#datepicker").datepicker()
     jQuery(window).width() > mdBreakpoint ? expandSidebar() : collapseSidebar();
   }
   
