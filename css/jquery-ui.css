@@ -377,26 +377,25 @@ button.ui-button::-moz-focus-inner {
 	text-align: center;
 	font-weight: bold;
 	border: 0;
-	width: 24px;
+	
 }
 .ui-datepicker td {
 	border: 0;
 	padding: 1px;
-	width: 24px;
-	height: 24px;
+	
+	
 }
 .ui-datepicker td span,
 .ui-datepicker td a {
 	display: block;
-	padding: .2em;
-	text-align: center;
-	text-justify: center;
+	padding: .2em;	
 	text-decoration: none;
-	width: 24px;
-	height: 24px;	
+	width: 36px;
+	height: 36px;	
 	display: flex;
     align-items: center;
     justify-content: center;
+	
 }
 .ui-datepicker .ui-datepicker-buttonpane {
 	background-image: none;
