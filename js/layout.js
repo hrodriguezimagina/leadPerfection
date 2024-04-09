@@ -16,9 +16,14 @@ $( document ).ready(function() {
    init();
   });
 
-  jQuery(".toggle-sidebar-button").on( "click", function() {
-    sidebarIsExpanded ? collapseSidebar() : expandSidebar();
+  jQuery(".sidebar-button-close").on( "click", function() {
+    collapseSidebar() 
   }); 
+
+  jQuery(".sidebar-button-open").on( "click", function() {
+    expandSidebar();
+  }); 
+  
 
   function init(){
     setHeader();
@@ -41,31 +46,37 @@ $( document ).ready(function() {
   }  
 
   function collapseSidebar(){
+    console.log('hello')
     if (isMobile()) { 
       jQuery('#sidebar').hide();      
       jQuery("#main").css("margin-left", '0px');      
     } else {
       jQuery('#sidebar').show();
       jQuery(".sidebar-text").hide();
-      jQuery('#close-sidebar-button').hide();
+      //jQuery('#close-sidebar-button').hide();
       jQuery("#sidebar").width(sidebarCollapsedWidth);
       jQuery("#sidebar-menu").removeClass('align-items-stretch');
-      jQuery("#main").css("margin-left", sidebarCollapsedWidth);
+      jQuery("#main").css("margin-left", sidebarCollapsedWidth);    
     }
+    jQuery('.sidebar-button-close').hide() 
+    jQuery('.sidebar-button-open').show() 
     sidebarIsExpanded = false;
   }
 
   function expandSidebar(){    
     if (isMobile()){
-      jQuery('#close-sidebar-button').show() 
+      //jQuery('#close-sidebar-button').show() 
     } else {      
-      jQuery('#close-sidebar-button').hide();
+      //jQuery('#close-sidebar-button').hide();
       jQuery("#main").css("margin-left", sidebarExpandedWidth);
     }
     jQuery("#sidebar").width(sidebarExpandedWidth);      
     jQuery("#sidebar-menu").addClass('align-items-stretch');      
     jQuery(".sidebar-text").show();    
     jQuery('#sidebar').show();
+    jQuery('.sidebar-button-close').show() 
+    jQuery('.sidebar-button-open').hide() 
+    
     sidebarIsExpanded = true;
   }
 

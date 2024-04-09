@@ -195,9 +195,56 @@ body {
   line-height: 18px; /* 128.571% */
 }
 
-#toggle-sidebar-button {
-  border-radius: 0px 8px 8px 0px;
+.sidebar-button-close {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  background: var(--primary);
+  opacity: 0.3;
+  line-height: 30px;
+  color: #333333;
+  width: 16px;
+  height: 40px;
+  line-height: 40px;  
+  border-radius: 10px 0 0 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
 }
+
+.sidebar-button-close:hover {  
+  background: var(--primary);
+  opacity: 1;
+  color: var(--white);
+}
+
+.sidebar-button-open > img {
+  rotate: 180deg;
+}
+
+.sidebar-button-open {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  background: var(--primary);
+  line-height: 30px;
+  color: #fff;
+  width: 16px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 0px 10px 10px 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+
 
 .white-card {
   background-color: var(--white);
