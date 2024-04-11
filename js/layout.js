@@ -33,11 +33,12 @@ $( document ).ready(function() {
   function setHeader(){
     if (isMobile()){
       jQuery("#header").addClass('fixed-top');
-      const marginTop = jQuery('#header').height() + 8;
+      const marginTop = jQuery('#header').height() + 20;
+      jQuery("#content").css("margin", '10px');
       jQuery("#content").css("margin-top", marginTop + 'px');
     } else {
       jQuery("#header").removeClass('fixed-top');
-      jQuery("#content").css("margin-top", '0px');
+      jQuery("#content").css("margin", '30px');
     }
   }
 
@@ -46,20 +47,19 @@ $( document ).ready(function() {
   }  
 
   function collapseSidebar(){
-    console.log('hello')
     if (isMobile()) { 
       jQuery('#sidebar').hide();      
       jQuery("#main").css("margin-left", '0px');      
-
+      jQuery(".sidebar-button-open").css('margin-left', '0px')
     } else {
       jQuery('#sidebar').show();
       jQuery(".sidebar-text").hide();
-      //jQuery('#close-sidebar-button').hide();
       jQuery("#sidebar").width(sidebarCollapsedWidth);
       jQuery("#sidebar-menu").removeClass('align-items-stretch');
       jQuery("#main").css("margin-left", sidebarCollapsedWidth);    
       jQuery('#company-logo').hide()
-      jQuery('#company-logo-mini').show()
+      jQuery('#company-logo-mini').show()      
+      jQuery(".sidebar-button-open").css('margin-left', '100px')
     }
     jQuery('.sidebar-button-close').hide() 
     jQuery('.sidebar-button-open').show() 
@@ -80,8 +80,7 @@ $( document ).ready(function() {
     jQuery('.sidebar-button-close').show() 
     jQuery('.sidebar-button-open').hide() 
     jQuery('#company-logo').show()
-    jQuery('#company-logo-mini').hide()
-    
+    jQuery('#company-logo-mini').hide()    
     sidebarIsExpanded = true;
   }
 

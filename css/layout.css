@@ -240,7 +240,7 @@ body {
   height: 48px;
   text-align: center;
   cursor: pointer;
-  position: relative;
+  
   background: var(--primary);
   line-height: 30px;
   color: #fff;  ;
@@ -251,17 +251,26 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
+  position: fixed;
+  z-index: 200;
+  left: 0;
 }
 
 .sidebar-button-open > img {
   rotate: 180deg;
 }
 
-
-
 .white-card {
   background-color: var(--white);
   border-radius: 10px;
+}
+
+.header-title {
+  margin-left: 40px;
+}
+
+.title-container {
+  height: 100px;
 }
 
 
