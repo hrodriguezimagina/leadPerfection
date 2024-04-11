@@ -2,8 +2,8 @@ $( document ).ready(function() {
   /* Toggle sidebar */
   const smBreakpoint = 576 // 576px bootstrap sm breakpoint
   const mdBreakpoint = 992 // 768px bootstrap md breakpoint
-  const sidebarCollapsedWidth = '128px';
-  const sidebarExpandedWidth = '256px';
+  const sidebarCollapsedWidth = '104px';
+  const sidebarExpandedWidth = '258px';
   let sidebarIsExpanded = true;
 
   // stores the selected date
@@ -50,6 +50,7 @@ $( document ).ready(function() {
     if (isMobile()) { 
       jQuery('#sidebar').hide();      
       jQuery("#main").css("margin-left", '0px');      
+
     } else {
       jQuery('#sidebar').show();
       jQuery(".sidebar-text").hide();
@@ -57,6 +58,8 @@ $( document ).ready(function() {
       jQuery("#sidebar").width(sidebarCollapsedWidth);
       jQuery("#sidebar-menu").removeClass('align-items-stretch');
       jQuery("#main").css("margin-left", sidebarCollapsedWidth);    
+      jQuery('#company-logo').hide()
+      jQuery('#company-logo-mini').show()
     }
     jQuery('.sidebar-button-close').hide() 
     jQuery('.sidebar-button-open').show() 
@@ -65,10 +68,10 @@ $( document ).ready(function() {
 
   function expandSidebar(){    
     if (isMobile()){
-      //jQuery('#close-sidebar-button').show() 
+      //jQuery('#close-sidebar-button').show()
     } else {      
       //jQuery('#close-sidebar-button').hide();
-      jQuery("#main").css("margin-left", sidebarExpandedWidth);
+      jQuery("#main").css("margin-left", sidebarExpandedWidth);      
     }
     jQuery("#sidebar").width(sidebarExpandedWidth);      
     jQuery("#sidebar-menu").addClass('align-items-stretch');      
@@ -76,6 +79,8 @@ $( document ).ready(function() {
     jQuery('#sidebar').show();
     jQuery('.sidebar-button-close').show() 
     jQuery('.sidebar-button-open').hide() 
+    jQuery('#company-logo').show()
+    jQuery('#company-logo-mini').hide()
     
     sidebarIsExpanded = true;
   }

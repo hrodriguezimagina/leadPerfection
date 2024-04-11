@@ -32,8 +32,21 @@ body {
   border-color: var(--primary-hover) !important;
 }
 
+/* company-logo */
 #company-logo {
   content: var(--company-logo);
+}
+
+#company-logo-mini {
+  content: var(--company-logo-mini);
+}
+
+.company-logo-container {
+  height: 100px;
+  max-height: 100px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 #content {
@@ -196,24 +209,23 @@ body {
 }
 
 .sidebar-button-close {
+  width: 22px;
+  height: 48px;
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: var(--primary);
-  opacity: 0.3;
+  background: #F3F3F3;
   line-height: 30px;
-  color: #333333;
-  width: 16px;
-  height: 40px;
+  color: rgba(136, 136, 136, 1);
   line-height: 40px;  
-  border-radius: 10px 0 0 10px !important;
+  border-radius: 12px 0 0 12px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin: 0;
   position: absolute;
   right: 0;
+  margin-top: 24px;
 }
 
 .sidebar-button-close:hover {  
@@ -222,26 +234,27 @@ body {
   color: var(--white);
 }
 
-.sidebar-button-open > img {
-  rotate: 180deg;
-}
 
 .sidebar-button-open {
+  width: 22px;
+  height: 48px;
   text-align: center;
   cursor: pointer;
   position: relative;
   background: var(--primary);
   line-height: 30px;
-  color: #fff;
-  width: 16px;
-  height: 40px;
+  color: #fff;  ;
   line-height: 40px;
-  border-radius: 0px 10px 10px 0px !important;
+  border-radius: 0px 12px 12px 0px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   margin: 0;
+}
+
+.sidebar-button-open > img {
+  rotate: 180deg;
 }
 
 
