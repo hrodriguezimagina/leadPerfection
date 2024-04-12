@@ -106,7 +106,7 @@
     <div id="main" class="vh-100">
       <!-- header -->
       <header id="header" class="bg-white">
-        <div class="d-flex flex-wrap align-items-center justify-content-end title-container border-bottom">
+        <div class="d-flex flex-md-wrap align-items-center justify-content-end title-container border-bottom">
           <div class="sidebar-button-open">
             <span class="mdi mdi-chevron-right" style="font-size: 24px;"></span>
           </div>
@@ -118,10 +118,10 @@
           </div>
         
           <!-- job select -->
-          <div class="me-2 order-3 order-sm-1">
+          <div class="me-2">
             <div class="input-group">
-              <span class="input-group-text mdi mdi-briefcase-outline bg-white" id="job-addon" style="font-size: 18px;"></span>
-              <select class="form-select" aria-label="Default select example" aria-describedby="job-addon" style="border-left: none;">
+              <span class="input-group-text mdi mdi-briefcase-outline bg-white d-none d-sm-block border-end-0" id="job-addon" style="font-size: 18px;"></span>
+              <select class="form-select form-select-sm" aria-label="Default select example" aria-describedby="job-addon">
                 <option selected>Select a job</option>
                 <option value="1">Job A</option>
                 <option value="2">Job B</option>
@@ -130,11 +130,11 @@
             </div>
           </div>
           <!-- notifications -->
-          <div class="order-1 order-sm-1">
+          <div class="">
             <span class="mdi mdi-bell bg-white icon-primary" style="font-size: 24px;"></span>
           </div>
           <!-- profile -->
-          <div class="dropdown text-end me-3 order-1 order-sm-2">
+          <div class="dropdown text-end me-3">
             <a href="#" class="link-body-emphasis text-decoration-none dropdown-toggle d-none d-md-block" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
               <span class="fw-bold">brubertone</span>
