@@ -2,7 +2,7 @@
   --white: #fff;
   --black-black-70: rgba(0, 0, 0, 0.70);
   --black-black-30: rgba(0, 0, 0, 0.30);
-  --content-background-color: #EAEDED;
+  --content-background-color: #F5F5F5;
 }
 
 body {  
@@ -239,6 +239,10 @@ body {
 .white-card {
   background-color: var(--white);
   border-radius: 10px;
+}
+
+#header {
+  background-color: rgba(255, 255, 255, 0.7)
 }
 
 .header-title {
