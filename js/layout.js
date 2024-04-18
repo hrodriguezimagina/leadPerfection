@@ -4,7 +4,6 @@ $( document ).ready(function() {
   const mdBreakpoint = 992 // 768px bootstrap md breakpoint
   const sidebarCollapsedWidth = '104px';
   const sidebarExpandedWidth = '258px';
-  let sidebarIsExpanded = true;
 
   // stores the selected date
   let selectedDate;
@@ -31,14 +30,20 @@ $( document ).ready(function() {
   }
   
   function setHeader(){
+    const header = jQuery("#header");
+    const content  = jQuery("#content");
     if (isMobile()){
-      jQuery("#header").addClass('fixed-top');
-      const marginTop = jQuery('#header').height() + 20;
-      jQuery("#content").css("margin", '10px');
-      jQuery("#content").css("margin-top", marginTop + 'px');
+      header.addClass('fixed-top');
+      header.css('background-color', '#ffffff');
+      header.addClass('border-bottom');
+      const marginTop = header.height() + 20;
+      content.css("margin", '10px');
+      content.css("margin-top", marginTop + 'px');
     } else {
-      jQuery("#header").removeClass('fixed-top');
-      jQuery("#content").css("margin", '30px');
+      header.removeClass('fixed-top');
+      header.removeClass('border-bottom');
+      header.css('background-color', 'rgba(255, 255, 255, 0.7)');            
+      content.css("margin", '30px');
     }
   }
 
@@ -62,8 +67,7 @@ $( document ).ready(function() {
       jQuery(".sidebar-button-open").css('margin-left', '100px')
     }
     jQuery('.sidebar-button-close').hide() 
-    jQuery('.sidebar-button-open').show() 
-    sidebarIsExpanded = false;
+    jQuery('.sidebar-button-open').show()
   }
 
   function expandSidebar(){    
@@ -80,11 +84,10 @@ $( document ).ready(function() {
     jQuery('.sidebar-button-close').show() 
     jQuery('.sidebar-button-open').hide() 
     jQuery('#company-logo').show()
-    jQuery('#company-logo-mini').hide()    
-    sidebarIsExpanded = true;
+    jQuery('#company-logo-mini').hide()
   }
 
-  /* jquery datepicker */
+  /* jQuery datepicker */
   function configDatepicker(){  
     const datePickerContainer = jQuery('#datepicker-container');
     // init and hide datepicker
