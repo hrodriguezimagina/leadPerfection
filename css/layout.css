@@ -26,12 +26,6 @@ body {
   border-color: var(--primary) !important;
 }
 
-.btn-primary:hover {
-  color: var(--white) !important;
-  background-color: var(--primary-hover) !important;
-  border-color: var(--primary-hover) !important;
-}
-
 /* company-logo */
 #company-logo {
   content: var(--company-logo);
@@ -152,14 +146,6 @@ body {
   color: #777 !important;
 }
 
-.nav-underline .nav-link:focus, .nav-underline .nav-link:hover {
-  border-bottom-color: var(--primary-hover);
-}
-
-.nav-link:focus, .nav-link:hover {
-  color: var(--primary-hover);
-}
-
 .nav-link, .nav-link {
   color: #777777;
 }
@@ -171,10 +157,6 @@ body {
   z-index: 1040; /*above bootstrap fixed-top z-index */
   top: 0;
   left: 0;
-}
-
-#sidebar-menu .link-body-emphasis:hover {
-  background-color: var(--primary-hover);
 }
 
 .text-primary {
@@ -196,11 +178,6 @@ body {
 
 .table-hover tbody tr td  span{  
   color: #000000b3;
-}
-
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: var(--primary-hover);
-  border-bottom-color: var(--primary);
 }
 
 .text-bold {
@@ -233,7 +210,6 @@ body {
   opacity: 1;
   color: var(--white);
 }
-
 
 .sidebar-button-open {
   width: 22px;
