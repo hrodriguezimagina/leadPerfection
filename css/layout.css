@@ -112,7 +112,7 @@ body {
 }
 
 .job-icon-unbalanced {
-  background-color: rgba(239, 187, 0, 0.25);
+  background-color: rgba(228, 91, 32, 0.25);
   border-radius: 50%;
   height: 60px;
   width: 60px;
@@ -121,7 +121,7 @@ body {
 
 .job-icon-unbalanced .mdi {
   font-size: 32px;
-  color: #EFBB00;
+  color: rgba(228, 91, 32, 1)
 }
 
 .job-icon-cash {
@@ -185,6 +185,9 @@ body {
   line-height: 18px; /* 128.571% */
 }
 
+.sidebar-text {
+  margin-left: 12px;
+}
 .sidebar-button-close {
   width: 22px;
   height: 48px;
@@ -239,10 +242,6 @@ body {
 .white-card {
   background-color: var(--white);
   border-radius: 10px;
-}
-
-#header {
-  background-color: rgba(255, 255, 255, 0.7)
 }
 
 .header-title {
