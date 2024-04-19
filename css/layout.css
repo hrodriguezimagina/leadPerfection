@@ -275,6 +275,15 @@ body {
   height: 100px;
 }
 
+.table-navigation-filters {
+  max-width: 400px;
+}
+
+.table-navigation-separator {
+  height: 35px; 
+  border: 1px solid #ccc;
+}
+
 
 /* date picker custom css*/
 #datepicker-container {
