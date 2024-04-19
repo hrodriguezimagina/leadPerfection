@@ -72,9 +72,7 @@ $( document ).ready(function() {
 
   function expandSidebar(){    
     if (isMobile()){
-      //jQuery('#close-sidebar-button').show()
-    } else {      
-      //jQuery('#close-sidebar-button').hide();
+    } else {
       jQuery("#main").css("margin-left", sidebarExpandedWidth);      
     }
     jQuery("#sidebar").width(sidebarExpandedWidth);      
