@@ -327,3 +327,17 @@ body {
   width: 300px !important;
 }
  
+/* services */
+.completed-icon {
+  background-color: rgba(23, 194, 92, 1);
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+.waiting-icon {
+  background-color: rgba(239, 187, 0, 1);
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
