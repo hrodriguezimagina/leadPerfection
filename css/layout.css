@@ -84,22 +84,22 @@ body {
 
 /* red timer-sand */
 .color-urgent {
-  color: #D83232;
+  color: #D83232 !important;
 }
 
 /* orange timer-sand */
 .color-important {
-  color: #EFB008;
+  color: #EFB008 !important;
 }
 
 /* blue timer-sand */
 .color-standar {
-  color: #41ADD1;
+  color: #41ADD1 !important;
 }
 
 /* gray timer-sand */
 .color-no-rush {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4) !important;
 }
 
 .custom-file-upload {
