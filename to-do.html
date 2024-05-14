@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-do</title>
+    <title>To-Dos</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
@@ -114,7 +114,7 @@
           <!-- content title -->
           <div class="flex-grow-1">
             <div class="header-title">
-              <h4>To-do</h4>
+              <h4>To-Dos</h4>
             </div>
           </div>
         
@@ -184,454 +184,136 @@
           </div>
         </div>        
       </header>
-       <!-- content -->
-       <div id="content">
-        <div id="content">
-        <div class="container-fluid py-4">
-          <!-- tabs -->
-          <div class="mb-3">
-            <div class="d-flex flex-wrap align-items-center justify-content-md-end justify-content-center p-2">
-              <div class="border-bottom">
-                <ul class="nav nav-underline">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">
-                      <span class="mdi mdi-calendar-check" style="font-size: 20px;"></span> Today
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-primary" href="#">
-                    <span class="mdi mdi-home-variant-outline" style="font-size: 20px;"></span> All
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span class="mdi mdi-calendar-month" style="font-size: 20px;"></span> Schedule
-                    </a>  
-                  </li>
-                </ul>
-              </div>                
-            </div>
-          </div>
-          <!-- add task card -->
-          <div class="white-card mb-4">
-            <div class="d-flex flex-wrap align-items-center justify-content-end p-3 border-bottom">
-              <div class="flex-grow-1">                  
-                <div class="gx-4">
-                  <button class="btn btn-light icon-black-30 bg-white border-0">
-                    <span class="mdi mdi-pencil-outline icon-black-30" style="font-size: 20px;"></span>
-                  </button>
-                  Add task
-                </div>
-              </div>
-              <div>
-              <!-- priority -->                  
-                <div class="dropdown">
-                  <button class="btn btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="mdi mdi-timer-sand-empty icon-black-30" style="font-size: 20px;"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">
-                      <span class="mdi mdi-timer-sand-full color-urgent" style="font-size: 20px;"></span>
-                        Urgent
-                      </a>
-                    </li>
-                    <li><a class="dropdown-item" href="#">
-                        <span class="mdi mdi-timer-sand-full color-important" style="font-size: 20px; color: rgba(239, 176, 8, 1);"></span>
-                        Important
-                      </a>
-                    </li>
-                    <li><a class="dropdown-item" href="#">
-                        <span class="mdi mdi-timer-sand-full color-standar" style="font-size: 20px;"></span>
-                        Standar
-                      </a>
-                    </li>
-                    <li><a class="dropdown-item" href="#">
-                        <span class="mdi mdi-timer-sand-empty color-no-rush" style="font-size: 20px;"></span>
-                        No Rush
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+      <!-- content -->
+      <div id="content">
+        <!-- Documents -->
+        <div class="container-fluid">
+          <!-- filter by -->
+          <div class="row mt-4"> 
+            <div class="col-10 col-sm-10 col-md-8">
+              <div class="d-flex align-items-center justify-content-end table-navigation-filters">
+                <select class="form-select me-3">
+                  <option selected>Filter By</option>
+                  <option value="1">Service One</option>
+                  <option value="2">Service Two</option>
+                  <option value="3">Service Three</option>
+                </select>
+                <select class="form-select">
+                  <option selected>Sort By</option>
+                  <option value="1">Date & Status One</option>
+                  <option value="2">Date & Status Two</option>
+                  <option value="3">Date & Status Three</option>
+                </select>
               </div>
             </div>
-            <div class="d-flex flex-wrap align-items-center justify-content-end p-3">
-              <div class="flex-grow-1">
-                <div class="gx-4">
-                  <button class="btn btn-light icon-black-30 bg-white border-0">
-                    <span class="mdi mdi-share-variant" style="font-size: 18px;"></span>
-                  </button>
-                  <button class="btn btn-light icon-black-30 bg-white border-0">
-                    <span class="mdi mdi-account-group" style="font-size: 18px;"></span>
-                  </button>
-                  <!-- datepicker -->
-                  <button type="button" class="btn btn-light icon-black-30" id="datepicker-button"/>
-                    <span class="mdi mdi-calendar-clock" style="font-size: 18px;"></span>
-                  </button>
-                  <div id="datepicker-container" class="card p-2">
-                    <div id="datepicker">
-                    </div>
-                    <div class="d-grid gap-2">
-                      <button type="button" class="btn btn-primary" id="datepicker-save-button"/>                    
-                        Save
-                      </button>
-                    </div>
-                  </div>
-                  <!-- datepicker -->
-                    
-                  </button>
-                  <button class="btn btn-light icon-black-30 bg-white border-0">
-                    <span class="mdi mdi-bell-outline" style="font-size: 18px;"></span>
-                  </button>
-                  <button class="btn btn-light icon-black-30 bg-white border-0">
-                    <span class="mdi mdi-account-arrow-right-outline" style="font-size: 18px;"></span>
-                  </button>
-                  <button class="btn btn-light icon-black-30 bg-white border-0">
-                    <span class="mdi mdi-map-marker-outline" style="font-size: 18px;"></span>
-                  </button>
-                  <button class="btn btn-light icon-black-30 bg-white border-0">
-                    <span class="mdi mdi-paperclip" style="font-size: 18px;"></span>
-                  </button>
-                </div>
-              </div>
-              <div class="d-flex align-items-center justify-content-end">
-                <div class="mx-4">
-                  <select class="form-select w-auto" aria-label="Default select example" >
-                    <option selected>Select Category</option>
-                    <option value="1">Category A</option>
-                    <option value="2">Category B</option>
-                    <option value="3">Category C</option>
-                  </select>
-                </div>
-                <div class="">
-                  <button class="btn btn-light">
-                    <span class="mdi mdi-plus" style="font-size: 20px;"></span>
-                    Add task
-                  </button>
+            <!-- search -->
+            <div class="col-2 col-sm-2 col-md-4">
+              <div class="d-flex justify-content-end">
+                <div class="input-group">
+                  <span class="mdi mdi-magnify input-group-text" id="search"></span>
+                  <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search">
+                  </input>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Task 05-->
-          <div class="white-card my-3">
-            <div class="d-flex flex-wrap align-items-center justify-content-start p-3">
-              <div class="d-flex">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              </div>
-              <div class="flex-grow-1">
-                <div class="d-flex flex-column px-3">
-                  <div class="">Task 05</div>
-                  <div class="d-flex flex-wrap justify-content-start align-items-center">
-                    <div>
-                      <span>Category name</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex-grow-1 d-flex justify-content-end align-items-center">                
-                <span class="mdi mdi-timer-sand-empty color-no-rush" style="font-size: 20px;"></span>
-                <!-- edit task dropdown -->      
-                <div class="dropdown">
-                  <button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="mdi mdi-dots-vertical icon-black-30" style="font-size: 20px;"></span>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 260px;">
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-square-edit-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Edit task</span>
+          
+          <!-- services table -->
+          <div class="table-responsive medium mt-5 shadow">
+            <table class="table table-striped table align-middle table-hover m-0">
+              <thead>
+                <tr>
+                  <th scope="col text-center" style="width:5%">
+                    <!--icon-->
+                  </th>
+                  <th scope="col text-center">
+                    <span class="text-primary">Type</span>
+                  </th>
+                  <th scope="col text-center">
+                    <span class="text-primary">Assigned to</span>
+                  </th>
+                  <th scope="col text-center">
+                    <span class="text-primary">Due Date</span>
+                  </th>
+                  <th scope="col">
+                    <span class="text-primary">Notes</span>
+                  </th>
+                  <th scope="col">
+                    <span class="text-primary">Entered</span>
+                  </th>
+                  <th scope="col text-center" style="width:5%">
+                  </th>
+                  <th scope="col" style="width:5%"></th>
+                </tr>
+              </thead>
+              <tbody>                
+                <tr>
+                  <td>
+                    <span class="mdi mdi-calendar-clock" style="font-size: 20px"></span>
+                  </td>
+                  <td>
+                    <span>Service - Callback Request</span>
+                  </td>
+                  <td>
+                    <span class="fw-bold">Last name, Name</span>
+                  </td>
+                  <td>
+                    <span>mm/dd/yyyy</span>
+                  </td>
+                  <td>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar molestie quam, vel maximus sem lobortis ac. Nullam laoreet lectus urna, vel ultricies lacus varius vel. Quisque iaculis fermentum varius.
+                    </p>
+                  </td>
+                  <td>
+                    <span>mm/dd/yyyy</span>
+                    <span>Last name, Name</span>
+                  </td>
+                  <td>
+                    <span class="mdi mdi-timer-sand-empty color-no-rush" style="font-size: 20px;"></span>
+                  </td>
+                  <td>
+                  <!-- edit task dropdown -->      
+                    <div class="dropdown position-static">
+                      <button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="mdi mdi-dots-vertical icon-black-30" style="font-size: 20px;"></span>
                       </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-content-duplicate icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Duplicate</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-folder-move-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Move</span>
-                      </button>
-                    </li>
-                    <div class="dropdown-divider"></div>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-trash-can-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Delete task</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <!-- edit task dropdown -->
-                <span class="mdi mdi-drag-horizontal-variant icon-black-30" style="font-size: 20px;"></span>
-              </div>
-            </div>              
-          </div>
-          <!-- Task 04-->
-          <div class="white-card my-3">
-            <div class="d-flex flex-wrap align-items-center justify-content-start p-3">
-              <div class="d-flex">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              </div>
-              <div class="flex-grow-1">
-                <div class="d-flex flex-column px-3">
-                  <div class="">Task 04</div>
-                  <div class="d-flex flex-wrap justify-content-start align-items-center">
-                    <div>
-                      <span>Category name</span>
-                    </div>
-                    <div>
-                      <span class="mdi mdi-calendar-clock mx-1" style="font-size: 18px;"></span>Due on 10/10/2023
-                    </div>
-                    <div>
-                      <span class="mdi mdi-map-marker-outline mx-1" style="font-size: 18px;"></span>
-                      Lakeland
-                    </div>
-                  </div>
-                </div>
-              </div>            
-              <div class="flex-grow-1 d-flex justify-content-end align-items-center">
-                <span class="mdi mdi-timer-sand-full color-important" style="font-size: 20px;"></span>
-                <!-- edit task dropdown -->      
-                <div class="dropdown">
-                  <button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="mdi mdi-dots-vertical icon-black-30" style="font-size: 20px;"></span>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 260px;">
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-square-edit-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Edit task</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-content-duplicate icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Duplicate</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-folder-move-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Move</span>
-                      </button>
-                    </li>
-                    <div class="dropdown-divider"></div>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-trash-can-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Delete task</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <!-- edit task dropdown -->      
-                <span class="mdi mdi-drag-horizontal-variant icon-black-30" style="font-size: 20px;"></span>
-              </div>
-            </div>              
-          </div>
-          <!-- Task 03-->
-          <div class="white-card my-3">
-            <div class="d-flex flex-wrap align-items-center justify-content-start p-3">
-              <div class="d-flex">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              </div>
-              <div class="flex-grow-1">
-                <div class="d-flex flex-column px-3">
-                  <div class="">Task 03</div>
-                  <div class="d-flex flex-wrap justify-content-start align-items-center">
-                    <div>
-                      <span>Category name</span>
-                    </div>
-                    <div>
-                      <span class="mdi mdi-paperclip mx-1" style="font-size: 18px;"></span>document.pdf
-                    </div>
-                  </div>
-                </div>
-              </div>            
-              <div class="flex-grow-1 d-flex justify-content-end align-items-center">
-                <span class="mdi mdi-timer-sand-empty color-no-rush" style="font-size: 20px;"></span>
-                <!-- edit task dropdown -->      
-                <div class="dropdown">
-                  <button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="mdi mdi-dots-vertical icon-black-30" style="font-size: 20px;"></span>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 260px;">
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-square-edit-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Edit task</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-content-duplicate icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Duplicate</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-folder-move-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Move</span>
-                      </button>
-                    </li>
-                    <div class="dropdown-divider"></div>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-trash-can-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Delete task</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <!-- edit task dropdown -->      
-                <span class="mdi mdi-drag-horizontal-variant icon-black-30" style="font-size: 20px;"></span>
-              </div>
-            </div>              
-          </div>
-          <!-- Task 02-->
-          <div class="white-card my-3">
-            <div class="d-flex flex-wrap align-items-center justify-content-star p-3">
-              <div class="d-flex">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              </div>
-              <div class="flex-grow-1">
-                <div class="d-flex flex-column px-3">
-                  <div class="">Task 02</div>
-                  <div class="d-flex flex-wrap justify-content-start align-items-center">
-                    <div>
-                      <span>Category name</span>
-                    </div>
-                    <div>
-                      <span class="mdi mdi-calendar-clock mx-1" style="font-size: 18px;"></span>Due on 09/09/2023 at 5:00pm
-                    </div>
-                    <div>
-                      <span class="mdi mdi-bell-outline mx-1" style="font-size: 18px;"></span>
-                      Tomorrow
-                    </div>
-                    <div>
-                      <span class="mdi mdi-paperclip mx-1" style="font-size: 18px;"></span>image.jpg
-                    </div>
-                  </div>
-                </div>
-              </div>            
-              <div class="flex-grow-1 d-flex justify-content-end align-items-center">
-                <span class="mdi mdi-timer-sand-full color-standar" style="font-size: 20px;"></span>
-                <!-- edit task dropdown -->      
-                <div class="dropdown">
-                  <button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="mdi mdi-dots-vertical icon-black-30" style="font-size: 20px;"></span>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 260px;">
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-square-edit-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Edit task</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-content-duplicate icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Duplicate</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-folder-move-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Move</span>
-                      </button>
-                    </li>
-                    <div class="dropdown-divider"></div>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-trash-can-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Delete task</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <!-- edit task dropdown -->      
-                <span class="mdi mdi-drag-horizontal-variant icon-black-30" style="font-size: 20px;"></span>
-              </div>
-            </div>              
-          </div>
-          <!-- Task 01-->
-          <div class="white-card my-3">
-            <div class="d-flex flex-wrap align-items-center justify-content-start p-3">
-              <div class="d-flex">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              </div>
-              <div class="flex-grow-1">
-                <div class="d-flex flex-column px-3">
-                  <div class="">Task 01</div>
-                  <div class="d-flex flex-wrap justify-content-start align-items-center">
-                    <div>
-                      <span>Category name</span>
-                    </div>
-                    <div>
-                      <span class="mdi mdi-calendar-clock mx-1" style="font-size: 18px;"></span>Due on 09/09/2023 at 5:00pm
-                    </div>
-                    <div>
-                      <span class="mdi mdi-account-group mx-1" style="font-size: 18px;"></span>
-                      Vince, John
-                    </div>
-                    <div>
-                      <span class="mdi mdi-bell-outline mx-1" style="font-size: 18px;"></span>
-                      Tomorrow
-                    </div>
-                    <div>
-                      <span class="mdi mdi-map-marker-outline mx-1" style="font-size: 18px;"></span>
-                      Lakeland
-                    </div>
-                    <div>
-                      <span class="mdi mdi-paperclip mx-1" style="font-size: 18px;"></span>image.jpg
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex-grow-1 d-flex justify-content-end align-items-center">
-                <span class="mdi mdi-timer-sand-full color-urgent" style="font-size: 20px;"></span>
-                <!-- edit task dropdown -->      
-                <div class="dropdown">
-                  <button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="mdi mdi-dots-vertical icon-black-30" style="font-size: 20px;"></span>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 260px;">
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-square-edit-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Edit task</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-content-duplicate icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Duplicate</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-folder-move-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Move</span>
-                      </button>
-                    </li>
-                    <div class="dropdown-divider"></div>
-                    <li>
-                      <button class="dropdown-item py-3" type="button">
-                        <span class="mdi mdi-trash-can-outline icon-black-70" style="font-size: 20px;"></span>
-                        <span class="mx-2">Delete task</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <!-- edit task dropdown -->      
-                <span class="mdi mdi-drag-horizontal-variant icon-black-30" style="font-size: 20px;"></span>
-              </div>
-            </div>              
+                      <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 260px;">
+                        <li>
+                          <button class="dropdown-item py-3" type="button">
+                            <span class="mdi mdi-square-edit-outline icon-black-70" style="font-size: 20px;"></span>
+                            <span class="mx-2">Edit task</span>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item py-3" type="button">
+                            <span class="mdi mdi-content-duplicate icon-black-70" style="font-size: 20px;"></span>
+                            <span class="mx-2">Duplicate</span>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item py-3" type="button">
+                            <span class="mdi mdi-folder-move-outline icon-black-70" style="font-size: 20px;"></span>
+                            <span class="mx-2">Move</span>
+                          </button>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li>
+                          <button class="dropdown-item py-3" type="button">
+                            <span class="mdi mdi-trash-can-outline icon-black-70" style="font-size: 20px;"></span>
+                            <span class="mx-2">Delete task</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>                    
+                  </td>
+                </tr>                
+              </tbody>
+            </table>            
           </div>
         </div>
       </div>
-      </div>
+      
     </div>
     <!----------->
     <!-- add profile photo Modal -->
