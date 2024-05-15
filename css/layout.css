@@ -341,3 +341,20 @@ body {
   width: 13px;
   height: 13px;
 }
+
+/*to dos icons*/
+.to-do-completed-icon {
+  color: rgba(166, 209, 44, 1) !important
+}
+
+.to-do-pending-icon {
+  color: rgba(180, 91, 222, 1) !important
+}
+
+.to-do-in-progress-icon {
+  color: rgba(64, 173, 209, 1) !important
+}
+
+.to-do-in-cancelled-icon {
+  color: rgba(216, 50, 50, 1) !important
+}
