@@ -358,3 +358,8 @@ body {
 .to-do-in-cancelled-icon {
   color: rgba(216, 50, 50, 1) !important
 }
+
+/* bs custom*/
+.dropdown-item:active {
+  background-color: var(--primary) !important;
+}
