@@ -231,92 +231,38 @@
           
           <!-- services table -->
           <div class="mt-5">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
               <div class="col">
                 <div class="card shadow">
                   <div class="card-body">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between mb-2">
                       <div>
-                        <span class="mdi mdi-calendar-month-outline" style="font-size: 18px;"></span>
-                        <span>Nov 24, 2024. 10:00am </span>
+                        <span class="mdi mdi-calendar-month-outline notes-card-date" style="font-size: 18px;"></span>
+                        <span class="notes-card-date">Nov 24, 2024. 10:00am </span>
                       </div>
                       <div>
-                        <span class="badge text-bg-success px-2 py-1">CATEGORY NAME</span>
+                        <span class="badge px-2 py-1 notes-card-category_1">CATEGORY NAME</span>
                       </div>
                     </div>
                     <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
                     <div class="card-text">
-                      <p class="paragraph-two-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a dignissim tortor, in sollicitudin nulla...</p>
+                      <p class="paragraph-two-lines">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        In a dignissim tortor, in sollicitudin nulla...
+                      </p>
                     </div>
                     <div class="d-flex justify-content-between">
                       <div>
                         <span class="mdi mdi-account-outline" style="font-size: 18px;"></span>
                         <span>User Name</span>
                       </div>
-                      <div class="">
-                        button
+                      <div>
+                        <button class="btn btn-light text-primary notes-card-readmore" type="button" data-bs-toggle="modal" data-bs-target="#notesReadMore">READ MORE</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="card shadow">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <span class="mdi mdi-calendar-month-outline" style="font-size: 18px;"></span>
-                        <span>Nov 24, 2024. 10:00am </span>
-                      </div>
-                      <div>
-                        <span class="badge text-bg-success px-2 py-1">CATEGORY NAME</span>
-                      </div>
-                    </div>
-                    <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                    <div class="card-text">
-                      <p class="paragraph-two-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a dignissim tortor, in sollicitudin nulla...</p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <span class="mdi mdi-account-outline" style="font-size: 18px;"></span>
-                        <span>User Name</span>
-                      </div>
-                      <div class="">
-                        button
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <span class="mdi mdi-calendar-month-outline" style="font-size: 18px;"></span>
-                        <span>Nov 24, 2024. 10:00am </span>
-                      </div>
-                      <div>
-                        <span class="badge text-bg-success px-2 py-1">CATEGORY NAME</span>
-                      </div>
-                    </div>
-                    <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                    <div class="card-text">
-                      <p class="paragraph-two-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a dignissim tortor, in sollicitudin nulla...</p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <span class="mdi mdi-account-outline" style="font-size: 18px;"></span>
-                        <span>User Name</span>
-                      </div>
-                      <div class="">
-                        button
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
 
             </div>
             
@@ -345,12 +291,61 @@
       
     </div>
     <!----------->
-    <!-- new payment modal-->
+
+    <!-- note readmore-->
+    <div class="modal fade" id="notesReadMore" tabindex="-1" aria-labelledby="newTaskModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header p-4">
+            <h1 class="modal-title fs-5 text-bold" id="exampleModalLabel">Note</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card border-0">
+              <div class="card-body p-2">
+                <div class="d-flex justify-content-between mb-2">
+                  <div>
+                    <span class="mdi mdi-calendar-month-outline notes-card-date" style="font-size: 18px;"></span>
+                    <span class="notes-card-date">Nov 24, 2024. 10:00am </span>
+                  </div>
+                  <div>
+                    <span class="badge px-2 py-1 notes-card-category_1">CATEGORY NAME</span>
+                  </div>
+                </div>
+                <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                <div class="card-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    In a dignissim tortor, in sollicitudin nulla. Maecenas in felis scelerisque, lobortis diam non, molestie nisl. 
+                    Aliquam in justo hendrerit, lacinia libero quis, condimentum nulla. In ornare tortor mauris, ut sagittis ligula tincidunt vitae.
+                    <br/>
+                    Integer at metus auctor, maximus elit a, congue augue. 
+                    Donec suscipit risus vel eros euismod vehicula. 
+                    Sed eu enim at ligula sollicitudin fermentum eget vitae nulla. 
+                    Duis pharetra congue egestas. 
+                    Praesent facilisis quis odio eget pellentesque. 
+                    Curabitur sodales, augue id molestie pretium, orci ligula tincidunt quam, in euismod diam mi et tellus. 
+                    Proin id mauris varius, ullamcorper augue sed, facilisis nulla neque ante, blandit a nunc sed, fringilla.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <span class="mdi mdi-account-outline" style="font-size: 18px;"></span>
+                    <span>User Name</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- new note modal-->
     <div class="modal fade" id="newTaskModal" tabindex="-1" aria-labelledby="newTaskModal" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header p-4">
-            <h1 class="modal-title fs-5 text-bold" id="exampleModalLabel">New Payment / Edit Payment</h1>
+            <h1 class="modal-title fs-5 text-bold" id="exampleModalLabel">New Note / Edit Note</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
