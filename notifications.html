@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Documents</title>
+    <title>Notifications</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
@@ -33,7 +33,7 @@
         
         <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto align-items-center align-items-stretch">
           <li class="nav-item">
-            <a href="#" class="nav-link link-body-emphasis" aria-current="page">
+            <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-view-dashboard-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Dashboard</span>
             </a>
@@ -51,7 +51,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link btn-active">
+            <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-file-document-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Documents</span>
             </a>
@@ -112,7 +112,7 @@
           <!-- content title -->
           <div class="flex-grow-1">
             <div class="header-title">
-              <h4>Documents</h4>
+              <h4 style="font-weight: bold">Notifications</h4>
             </div>
           </div>
         
@@ -184,190 +184,6 @@
       </header>
       <!-- content -->
       <div id="content">
-        <!-- Documents -->
-        <div class="container-fluid">          
-          <div class="row mt-4">
-            <!-- filter by type and  -->
-            <div class="col-10 col-sm-10 col-md-6">
-              <div class="d-flex align-items-center justify-content-end table-navigation-filters">
-                <select class="form-select me-3">
-                  <option selected>Filter By (Type)</option>
-                  <option value="1">Type One</option>
-                  <option value="2">Type Two</option>
-                  <option value="3">Type Three</option>
-                </select>
-                <select class="form-select">
-                  <option selected>Sort By (Date)</option>
-                  <option value="1">Date One</option>
-                  <option value="2">Date Two</option>
-                  <option value="3">Date Three</option>
-                </select>
-              </div>
-            </div>
-            <!-- upload document -->
-            <div class="col-2 col-sm-2 col-md-6">
-              <div class="d-flex justify-content-end">
-                <button class="btn btn-primary btn-md" type="button">
-                  <span class="mdi mdi-upload" style="font-size: 18px;"></span>
-                  <span class="d-none d-md-inline">Upload Document</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- documents table -->
-          <div class="table-responsive medium mt-4 shadow">
-            <table class="table table-striped table-hover m-0">
-              <thead>
-                <tr>                  
-                  <th scope="col" class="">
-                    <span class="text-primary">Type</span>
-                  </th>
-                  <th scope="col" class="w-75">
-                    <span class="text-primary">Description</span>
-                  </th>
-                  <th scope="col">
-                    <span class="text-primary">Date</span>
-                  </th>
-                  <th scope="col" class="text-center">
-                    <span class="text-primary">View</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center" >
-                    <a class="color-no-rush" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>                  
-                  <td><span class="text-bold">Document title</span></td>
-                  <td><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet.</span></td>
-                  <td><span>mm/dd/yyyy</span></td>
-                  <td class="text-center">
-                    <a class="" href="#">
-                      <span class="mdi mdi-eye" style="font-size: 18px;color: rgba(0, 0, 0, 0.4);"></span>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>            
-          </div>
-          <!-- table pagination -->
-          <div class="d-flex justify-content-end pt-4">
-            <div class="d-inline-flex align-items-center">
-              <span class="me-2">Showing 1-10 of 35 rows</span>
-              <select class="form-select me-2" style="width: 80px;">
-                <option selected>10</option>
-                <option value="1">5</option>
-                <option value="2">10</option>
-                <option value="3">100</option>
-              </select>
-              <span class="me-2">rows per page </span>
-              <span class="mx-2 table-navigation-sparator"></span>
-              <button class="btn btn-light btn-circle me-2" type="button">
-                <span class="mdi mdi-chevron-left" style="font-size: 18px;"></span>                  
-              </button>
-              <button class="btn btn-secondary btn-circle" type="button">
-                <span class="mdi mdi-chevron-right" style="font-size: 18px;"></span>                  
-              </button>
-            </div>              
-          </div>
-        </div>
       </div>
     </div>
     <!----------->

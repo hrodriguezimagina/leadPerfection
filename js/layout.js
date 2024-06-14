@@ -63,7 +63,7 @@ $( document ).ready(function() {
       jQuery("#sidebar-menu").removeClass('align-items-stretch');
       jQuery("#main").css("margin-left", sidebarCollapsedWidth);    
       jQuery('#company-logo').hide()
-      jQuery('#company-logo-mini').show()      
+      jQuery('.company-logo-container').css('height', '30px')      
       jQuery(".sidebar-button-open").css('margin-left', '100px')
     }
     jQuery('.sidebar-button-close').hide() 
@@ -82,7 +82,7 @@ $( document ).ready(function() {
     jQuery('.sidebar-button-close').show() 
     jQuery('.sidebar-button-open').hide() 
     jQuery('#company-logo').show()
-    jQuery('#company-logo-mini').hide()
+    jQuery('.company-logo-container').css('height', '100px')
   }
 
   /* jQuery datepicker */
