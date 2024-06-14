@@ -398,9 +398,15 @@ body {
 }
 
 .notes-card-category_4 {  
-  background-color: rgba(233, 30, 99, 1);
+  background-color: rgb(161, 161, 161);
 }
 
 .notes-card-category_5 {  
   background-color: rgba(103, 58, 183, 1);
+}
+
+.nav-item:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+  
 }
