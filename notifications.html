@@ -23,6 +23,7 @@
           <!-- company logo -->
           <div class="company-logo-container">
             <img id="company-logo" alt="Company Logo" src="">
+            
           </div>
           <div>
             <div class="sidebar-button-close" id="close-sidebar-button">
@@ -184,12 +185,56 @@
       </header>
       <!-- content -->
       <div id="content">
+        <div class="table-responsive medium mt-5 shadow table-bordered container mt-3">
+          <table class="table table-striped table align-middle table-hover m-0">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#all">All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#read">Read</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#unread">Unread</a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <table class="table mt-3">
+            <div id="all" class="container tab-pane fade"><br>
+              <table class="table table-striped table-hover">
+              <tbody>
+                <tr>
+                  <td>Data 1</td>
+                  <td>Data 2</td>
+                  <td>Data 3</td>
+                </tr>
+                <tr>
+                  <td>Data 4</td>
+                  <td>Data 5</td>
+                  <td>Data 6</td>
+                </tr>
+              </thead>
+              </tbody>
+            </div>
+            <div id="read" class="container tab-pane fade"><br>
+              <h3>Read</h3>
+              <p>Test</p>
+            </div>
+            <div id="unread" class="container tab-pane fade"><br>
+              <h3>Unread</h3>
+              <p>Test</p>
+            </div>
+          </table>  
+          </table>
+          </div>
+        </div>  
       </div>
     </div>
     <!----------->
     <!-- add profile photo Modal -->
     <div class="modal fade" id="addProfilePhoto" tabindex="-1" aria-labelledby="addProfilePhoto" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-dialog modal-dialog-centered">1
         <div class="modal-content">
           <div class="modal-header border-0">
             <h1 class="modal-title fs-5 text-bold" id="exampleModalLabel">Add Profile photo</h1>
