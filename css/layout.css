@@ -408,5 +408,12 @@ body {
 .nav-item:hover {
   background-color: #f3f3f3;
   cursor: pointer;
-  
+}
+
+.notificacion-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: var(--primary);
 }
