@@ -410,6 +410,14 @@ body {
   cursor: pointer;
 }
 
+.tab-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 10px;
+  color: var(--primary);
+}
+
 .notificacion-title {
   font-family: "Manrope", sans-serif;
   font-size: 14px;
@@ -425,9 +433,16 @@ body {
   margin-bottom: 3px;
 }
 
+.notificacion-time {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 3px;
+}
+
 .border-top-bottom {
-  border-top: 1px solid #f3f3f3;
-  border-bottom: 1px solid #f3f3f3;
+  border-top: 2px solid #f3f3f3;
+  border-bottom: 2px solid #f3f3f3;
   border-left: none !important;
   border-right: none !important;
 }
@@ -451,4 +466,8 @@ body {
 .nav-underline .nav-link.active::after,
   .nav-underline .nav-link:hover::after {
     background-color: var(--primary); 
+  }
+
+  .card-height {
+    height: 80px;
   }
