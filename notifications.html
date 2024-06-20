@@ -184,31 +184,64 @@
         </div>        
       </header>
       <!-- content -->
-      <div class="container-fluid pt-3 m-5 shadow w-auto bg-white rounded">
-        <ul class="nav nav-underline ms-3" role="tablist">
-          <li class="nav-item tab-title">
-            <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
-          </li>
-          <li class="nav-item tab-title"> 
-            <a class="nav-link" data-bs-toggle="tab" href="#unread">Unread</a>
-          </li>
-          <li class="nav-item tab-title">
-            <a class="nav-link" data-bs-toggle="tab" href="#read">Read</a>
-          </li>
-        </ul>
+      <div class="container-fluid p-2 m-5 shadow w-auto bg-white rounded container-notification">
+        <div class="row ">
+            <div class="col-md-6">
+                <ul class="nav nav-underline ms-3 custom-nav-tabs" role="tablist">
+                    <li class="nav-item tab-title">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
+                    </li>
+                    <li class="nav-item tab-title">
+                        <a class="nav-link" data-bs-toggle="tab" href="#unread">Unread</a>
+                    </li>
+                    <li class="nav-item tab-title">
+                        <a class="nav-link" data-bs-toggle="tab" href="#read">Read</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 d-flex">
+              <input type="date" class="form-control" id="inputDuedate" name="Due date" value="15-05-2024" min="01-01-2000" max="31-12-2030" />
+              <button type="button" class="btn btn-white ms-">Mark all as read</button>
+          </div>
+        </div>
+        <hr class="notification-separator" />
         <!-- Notification cards --> 
-        <div class="card-fluid mx-auto mt-2 rounded-0 border-top-bottom hover card-height">
-          <div class="d-flex">
-            <figure class="figure ms-3 mt-3">
-              <img src="./images/users/user_1.png" alt="brubertone" width="50" height="50" class="rounded-circle me-3" >
+        <section class="notification-item">
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/users/user_1.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
             </figure>
-            <div class="d-flex flex-column p-2 mt-2">
-              <h2 class="notificacion-title ">System</h2>
-              <p class="notificacion-message" >New team member joined! Welcome John to the team</p>
+            <div class="d-flex flex-column notificacion-body">
+              <h2 class="notificacion-title">System</h2>
+              <p class="notificacion-message">New team member joined! Welcome John to the team</p>
               <span class="notification-time">5 sec ago</span>
             </div>
           </div>
-        </div>
+          <hr class="notification-separator" />
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/users/user_3.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
+            </figure>
+            <div class="d-flex flex-column">
+              <h2 class="notificacion-title">User</h2>
+              <p class="notificacion-message">New team member joined! Welcome John to the team</p>
+              <span class="notification-time">5 sec ago</span>
+            </div>
+          </div>
+          <hr class="notification-separator" />
+        </section>
       </div> 
         <!-- Pagination -->
     <!----------->

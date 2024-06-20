@@ -406,7 +406,6 @@ body {
 }
 
 .nav-item:hover {
-  background-color: #f3f3f3;
   cursor: pointer;
 }
 
@@ -418,11 +417,54 @@ body {
   color: var(--primary);
 }
 
+.container-notification {
+  height: auto;
+
+}
+
+.notification-separator {
+  width: auto;
+  margin: 0 27px;
+  background-color: #0000001F;
+}
+
+.notification-item {
+  margin-top: 15px;
+}
+
+.notification-content-hover:hover {
+  background-color: #F3F3F3;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.notificacion-content {
+  align-items: center;
+  height: 69px;
+  padding: 8px 14px;
+  gap: 20px;
+}
+
+.notificacion-figure {
+  margin: 0;
+}
+
+.notification-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notificacion-body {
+  gap: 3px;
+}
+
 .notificacion-title {
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 3px;
+  margin: 0;
   color: var(--primary);
 }
 
@@ -430,14 +472,16 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 3px;
+  line-height: normal;
+  margin: 0;
 }
 
 .notificacion-time {
   font-family: "Manrope", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  margin-bottom: 3px;
+  line-height: normal;
+  margin: 0;
 }
 
 .border-top-bottom {
@@ -468,6 +512,9 @@ body {
     background-color: var(--primary); 
   }
 
-  .card-height {
-    height: 80px;
-  }
+.custom-nav-tabs .nav-link {
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+}
