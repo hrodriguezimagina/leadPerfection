@@ -33,67 +33,67 @@
         </div>
         
         <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto align-items-center align-items-stretch">
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-view-dashboard-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-account-group-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Your Team</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-flag-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Milestones</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-file-document-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Documents</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-format-list-text" style="font-size: 20px;"></span>
               <span class="sidebar-text">To Dos</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-note-edit-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Notes</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-receipt-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Payments</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-file-arrow-left-right-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Change orders</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-human-greeting-proximity" style="font-size: 20px;"></span>
               <span class="sidebar-text">Referrals</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-briefcase-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Services</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-chart-box-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Surveys/Reviews</span>
@@ -187,25 +187,25 @@
       <div class="container-fluid p-2 m-5 shadow w-auto bg-white rounded container-notification">
         <div class="d-flex justify-content-between">
             <ul class="nav nav-underline ms-3 custom-nav-tabs" role="tablist">
-              <li class="nav-item tab-title">
-                <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
-              </li>
-              <li class="nav-item tab-title">
-                <a class="nav-link" data-bs-toggle="tab" href="#unread">Unread</a>
-              </li>
-              <li class="nav-item tab-title">
-                <a class="nav-link" data-bs-toggle="tab" href="#read">Read</a>
-              </li>
+                <li class="nav-item tab-title">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
+                </li>
+                <li class="nav-item tab-title">
+                    <a class="nav-link" data-bs-toggle="tab" href="#unread">Unread</a>
+                </li>
+                <li class="nav-item tab-title">
+                    <a class="nav-link" data-bs-toggle="tab" href="#read">Read</a>
+                </li>
             </ul>
             <div class="d-flex align-items-center">
               <input 
-              type="date" class="form-control" id="inputDuedate" name="Due date" 
-              value="15-05-2024" min="01-01-2000" max="31-12-2030" 
+                type="date" class="form-control" id="inputDuedate" name="dueDate" 
+                value="15-05-2024" min="01-01-2000" max="31-12-2030" 
               />
-              <button type="button" class="btn btn-white ms-">
+              <button type="button" class="btn btn-white btn-mark">
                 Mark all as read
               </button>
-          </div>
+            </div>
         </div>
         <hr class="notification-separator" />
         <!-- Notification cards --> 
@@ -213,7 +213,7 @@
           <div class="d-flex notificacion-content notification-content-hover">
             <figure class="notificacion-figure">
               <img 
-                src="./images/users/user_1.png" 
+                src="./images/system-avatar.png" 
                 alt="brubertone" 
                 width="50" 
                 height="50" 
@@ -229,7 +229,27 @@
               <div class="notification-badge" />
             </section>
           </div>
-          <hr class="notification-separator" />
+            <hr class="notification-separator" />
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/users/user_2.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
+            </figure>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">User</h2>
+                <p class="notificacion-message">Milestone reached: Project Phase 1 completed successfully</p>
+                <span class="notification-time">10 sec ago</span>
+              </div>
+              <div class="notification-badge" />
+            </section>
+          </div>
+            <hr class="notification-separator" />
           <div class="d-flex notificacion-content notification-content-hover">
             <figure class="notificacion-figure">
               <img 
@@ -240,13 +260,151 @@
                 class="notification-avatar" 
               >
             </figure>
-            <div class="d-flex flex-column">
-              <h2 class="notificacion-title">User</h2>
-              <p class="notificacion-message">New team member joined! Welcome John to the team</p>
-              <span class="notification-time">5 sec ago</span>
-            </div>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">Installer</h2>
+                <p class="notificacion-message">Reminder: Milestone deadline approaching. Please ensure all task are completed</p>
+                <span class="notification-time">10 min ago</span>
+              </div>
+            </section>
           </div>
-          <hr class="notification-separator" />
+            <hr class="notification-separator" />
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/system-avatar.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
+            </figure>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">System</h2>
+                <p class="notificacion-message">New document uploaded: Project Proposal_v2.pdf</p>
+                <span class="notification-time">7 days ago at 10:10am</span>
+              </div>
+              <div class="notification-badge" />
+            </section>
+          </div>
+            <hr class="notification-separator" />
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/users/user_4.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
+            </figure>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">User</h2>
+                <p class="notificacion-message">Changed order requested: Client requested additional feature implementation</p>
+                <span class="notification-time">April 24 at 10:10am</span>
+              </div>
+              <div class="notification-badge" />
+            </section>
+          </div>
+            <hr class="notification-separator" />
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+              src="./images/users/user_5.png" 
+              alt="brubertone" 
+              width="50" 
+              height="50" 
+              class="notification-avatar" 
+              >
+            </figure>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">User</h2>
+                <p class="notificacion-message">Changed order approved: Revised project timeline submitted and accepted</p>
+                <span class="notification-time">April 22 at 12:10am</span>
+              </div>
+              <div class="notification-badge" />
+            </section>
+          </div>
+            <hr class="notification-separator" />
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/system-avatar.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
+            </figure>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">System</h2>
+                <p class="notificacion-message">New team member joined! Welcome Elizabeth to the team</p>
+                <span class="notification-time">April 16 at 2:10pm</span>
+              </div>
+            </section>
+          </div>
+            <hr class="notification-separator" />
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/users/user_6.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
+            </figure>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">User</h2>
+                <p class="notificacion-message">Reminder: Milestone deadline approaching. Service "X"</p>
+                <span class="notification-time">April 10 at 3:15pm</span>
+              </div>
+            </section>
+          </div>
+            <hr class="notification-separator" />
+          <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/users/user_1.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
+            </figure>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">User</h2>
+                <p class="notificacion-message">Service "X" has changed to completed</p>
+                <span class="notification-time">March 01 at 4:15pm </span>
+              </div>
+            </section>
+          </div>
+            <hr class="notification-separator" />
+            <div class="d-flex notificacion-content notification-content-hover">
+            <figure class="notificacion-figure">
+              <img 
+                src="./images/users/user_5.png" 
+                alt="brubertone" 
+                width="50" 
+                height="50" 
+                class="notification-avatar" 
+              >
+            </figure>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">User</h2>
+                <p class="notificacion-message">A new note has been added on service "X"</p>
+                <span class="notification-time">February 20 12:20am</span>
+              </div>
+            </section>
+          </div>
+            <hr class="notification-separator" />    
         </section>
       </div> 
         <!-- Pagination -->

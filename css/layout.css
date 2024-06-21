@@ -409,6 +409,11 @@ body {
   cursor: pointer;
 }
 
+.list-hover:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
 .tab-title {
   font-family: "Manrope", sans-serif;
   font-size: 18px;
@@ -432,9 +437,9 @@ body {
   font-weight: 500;
 }
 
-.notificacion-badge {
+.notification-badge {
   background-color: var(--primary);
-  color: var(--primary);
+  color: var(--white);
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -530,7 +535,7 @@ body {
     background-color: var(--primary); 
   }
 
-.custom-nav-tabs .nav-link { 
+.custom-nav-tabs .nav-link {
   height: 50px;
   line-height: 50px;
   display: flex;
