@@ -185,23 +185,26 @@
       </header>
       <!-- content -->
       <div class="container-fluid p-2 m-5 shadow w-auto bg-white rounded container-notification">
-        <div class="row ">
-            <div class="col-md-6">
-                <ul class="nav nav-underline ms-3 custom-nav-tabs" role="tablist">
-                    <li class="nav-item tab-title">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
-                    </li>
-                    <li class="nav-item tab-title">
-                        <a class="nav-link" data-bs-toggle="tab" href="#unread">Unread</a>
-                    </li>
-                    <li class="nav-item tab-title">
-                        <a class="nav-link" data-bs-toggle="tab" href="#read">Read</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-6 d-flex">
-              <input type="date" class="form-control" id="inputDuedate" name="Due date" value="15-05-2024" min="01-01-2000" max="31-12-2030" />
-              <button type="button" class="btn btn-white ms-">Mark all as read</button>
+        <div class="d-flex justify-content-between">
+            <ul class="nav nav-underline ms-3 custom-nav-tabs" role="tablist">
+              <li class="nav-item tab-title">
+                <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
+              </li>
+              <li class="nav-item tab-title">
+                <a class="nav-link" data-bs-toggle="tab" href="#unread">Unread</a>
+              </li>
+              <li class="nav-item tab-title">
+                <a class="nav-link" data-bs-toggle="tab" href="#read">Read</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center">
+              <input 
+              type="date" class="form-control" id="inputDuedate" name="Due date" 
+              value="15-05-2024" min="01-01-2000" max="31-12-2030" 
+              />
+              <button type="button" class="btn btn-white ms-">
+                Mark all as read
+              </button>
           </div>
         </div>
         <hr class="notification-separator" />
@@ -217,11 +220,14 @@
                 class="notification-avatar" 
               >
             </figure>
-            <div class="d-flex flex-column notificacion-body">
-              <h2 class="notificacion-title">System</h2>
-              <p class="notificacion-message">New team member joined! Welcome John to the team</p>
-              <span class="notification-time">5 sec ago</span>
-            </div>
+            <section class="d-flex justify-content-between w-100">
+              <div class="d-flex flex-column notificacion-body">
+                <h2 class="notificacion-title">System</h2>
+                <p class="notificacion-message">New team member joined! Welcome John to the team</p>
+                <span class="notification-time">5 sec ago</span>
+              </div>
+              <div class="notification-badge" />
+            </section>
           </div>
           <hr class="notification-separator" />
           <div class="d-flex notificacion-content notification-content-hover">
