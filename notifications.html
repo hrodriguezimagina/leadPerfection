@@ -351,7 +351,7 @@
           <div class="d-flex notificacion-content notification-content-hover">
             <figure class="notificacion-figure">
               <img 
-                src="./images/users/user_6.png" 
+                src="./images/users/user_1.png" 
                 alt="brubertone" 
                 width="50" 
                 height="50" 
@@ -370,7 +370,7 @@
           <div class="d-flex notificacion-content notification-content-hover">
             <figure class="notificacion-figure">
               <img 
-                src="./images/users/user_1.png" 
+                src="./images/users/user_6.png" 
                 alt="brubertone" 
                 width="50" 
                 height="50" 
@@ -381,7 +381,7 @@
               <div class="d-flex flex-column notificacion-body">
                 <h2 class="notificacion-title">User</h2>
                 <p class="notificacion-message">Service "X" has changed to completed</p>
-                <span class="notification-time">March 01 at 4:15pm </span>
+                <span class="notification-time">March 01 at 3:15am </span>
               </div>
             </section>
           </div>
@@ -408,24 +408,39 @@
        
         <!-- Pagination -->
         <hr class="notification-separator" />
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>    
+        <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <p class="entries ">Showing 1-10 of 30 entries</p>
+              </div>
+              <div class="col-md-6 text-right">
+                  <button type="button" class="btn btn-primary rounded-circle">1</button>
+                  <button type="button" class="btn btn-primary rounded-circle">2</button>
+                  <button type="button" class="btn btn-primary rounded-circle">3</button>
+                  <span>Show</span>
+                  <div class="dropdown d-inline">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          10
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">10</a>
+                          <a class="dropdown-item" href="#">20</a>
+                          <a class="dropdown-item" href="#">30</a>
+                          <a class="dropdown-item" href="#">50</a>
+                      </div>
+                  </div>
+                  <span>per page</span>
+                  <span class="vl"></span>
+                  <button type="button" class="btn btn-primary">
+                      <i class="fas fa-chevron-left"></i> Previous
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                      Next <i class="fas fa-chevron-right"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </div>    
     <!----------->
     <!-- add profile photo Modal -->
     <div class="modal fade" id="addProfilePhoto" tabindex="-1" aria-labelledby="addProfilePhoto" aria-hidden="true">

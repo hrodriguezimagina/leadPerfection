@@ -541,3 +541,14 @@ body {
   display: flex;
   align-items: center;
 }
+
+.vl {
+  border-left: 1px solid #ccc;
+  height: 25px; 
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.entries {
+  text-align: start;
+}
