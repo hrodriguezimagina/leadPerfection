@@ -422,10 +422,6 @@ body {
   color: var(--primary);
 }
 
-.container-notification {
-  height: auto;
-
-}
 
 .form-control {
   width: 160px;
@@ -461,14 +457,13 @@ body {
   cursor: pointer;
 }
 
-.notificacion-content {
-  align-items: center;
+.notification-content {
   height: 69px;
   padding: 8px 14px;
   gap: 20px;
 }
 
-.notificacion-figure {
+.notification-figure {
   margin: 0;
 }
 
@@ -479,11 +474,11 @@ body {
   object-fit: cover;
 }
 
-.notificacion-body {
+.notification-body {
   gap: 3px;
 }
 
-.notificacion-title {
+.notification-title {
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -491,7 +486,7 @@ body {
   color: var(--primary);
 }
 
-.notificacion-message {
+.notification-message {
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -499,7 +494,7 @@ body {
   margin: 0;
 }
 
-.notificacion-time {
+.notification-time {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -551,4 +546,9 @@ body {
 
 .entries {
   text-align: start;
+}
+
+.container-notification {
+  height: auto;
+
 }
