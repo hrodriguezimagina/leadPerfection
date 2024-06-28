@@ -189,15 +189,15 @@
         <div class="container-fluid">
           <div class="container-fluid mt-4 shadow w-auto bg-white rounded container-notification">
             <div class="d-flex justify-content-between flex-wrap flex-row">
-              <ul class="nav nav-underline ms-3 custom-nav-tabs" role="tablist">
+              <ul class="nav nav-underline ms-3 custom-nav-tabs" role="tablist" id="notificationTabs">
                   <li class="nav-item tab-title">
-                      <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
+                      <a class="nav-link active" data-bs-toggle="tab" id="#all-tab" href="#all">All</a>
                   </li>
                   <li class="nav-item tab-title">
-                      <a class="nav-link" data-bs-toggle="tab" href="#unread">Unread</a>
+                      <a class="nav-link" data-bs-toggle="tab" id="#unread-tab" href="#unread">Unread</a>
                   </li>
                   <li class="nav-item tab-title">
-                      <a class="nav-link" data-bs-toggle="tab" href="#read">Read</a>
+                      <a class="nav-link" data-bs-toggle="tab" id="read-tab" href="#read">Read</a>
                   </li>
               </ul>
               <div class="d-flex align-items-center">
@@ -211,240 +211,305 @@
               </div>
             </div>
             <hr class="notification-separator" />
-            <!-- Notification cards --> 
-              <section class="notification-item">
-                <div class="d-flex notification-content notification-content-hover">
-                  <figure class="notification-figure">
-                    <img 
-                      src="./images/system-avatar.png" 
-                      alt="brubertone" 
-                      width="50" 
-                      height="50" 
-                      class="notification-avatar" 
-                    >
-                  </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">System</h2>
-                    <p class="notification-message">New team member joined! Welcome John to the team</p>
-                    <span class="notification-time">5 sec ago</span>
-                  </div>
-                  <div class="notification-badge" />
-                </section>
-              </div>
-                <hr class="notification-separator" />
-              <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                    src="./images/users/user_2.png" 
-                    alt="brubertone" 
-                    width="50" 
-                    height="50" 
-                    class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">User</h2>
-                    <p class="notification-message">Milestone reached: Project Phase 1 completed successfully</p>
-                    <span class="notification-time">10 sec ago</span>
-                  </div>
-                  <div class="notification-badge" />
-                </section>
-              </div>
-                <hr class="notification-separator" />
-              <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                    src="./images/users/user_3.png" 
-                    alt="brubertone" 
-                    width="50" 
-                    height="50" 
-                    class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">Installer</h2>
-                    <p class="notification-message">Reminder: Milestone deadline approaching. Please ensure all task are completed</p>
-                    <span class="notification-time">10 min ago</span>
-                  </div>
-                </section>
-              </div>
-                <hr class="notification-separator" />
-              <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                    src="./images/system-avatar.png" 
-                    alt="brubertone" 
-                    width="50" 
-                    height="50" 
-                    class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">System</h2>
-                    <p class="notification-message">New document uploaded: Project Proposal_v2.pdf</p>
-                    <span class="notification-time">7 days ago at 10:10am</span>
-                  </div>
-                  <div class="notification-badge" />
-                </section>
-              </div>
-                <hr class="notification-separator" />
-              <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                    src="./images/users/user_4.png" 
-                    alt="brubertone" 
-                    width="50" 
-                    height="50" 
-                    class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">User</h2>
-                    <p class="notification-message">Changed order requested: Client requested additional feature implementation</p>
-                    <span class="notification-time">April 24 at 10:10am</span>
-                  </div>
-                  <div class="notification-badge" />
-                </section>
-              </div>
-                <hr class="notification-separator" />
-              <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                  src="./images/users/user_5.png" 
-                  alt="brubertone" 
-                  width="50" 
-                  height="50" 
-                  class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">User</h2>
-                    <p class="notification-message">Changed order approved: Revised project timeline submitted and accepted</p>
-                    <span class="notification-time">April 22 at 12:10am</span>
-                  </div>
-                  <div class="notification-badge" />
-                </section>
-              </div>
-                <hr class="notification-separator" />
-              <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                    src="./images/system-avatar.png" 
-                    alt="brubertone" 
-                    width="50" 
-                    height="50" 
-                    class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">System</h2>
-                    <p class="notification-message">New team member joined! Welcome Elizabeth to the team</p>
-                    <span class="notification-time">April 16 at 2:10pm</span>
-                  </div>
-                </section>
-              </div>
-                <hr class="notification-separator" />
-              <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                    src="./images/users/user_1.png" 
-                    alt="brubertone" 
-                    width="50" 
-                    height="50" 
-                    class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">User</h2>
-                    <p class="notification-message">Reminder: Milestone deadline approaching. Service "X"</p>
-                    <span class="notification-time">April 10 at 3:15pm</span>
-                  </div>
-                </section>
-              </div>
-                <hr class="notification-separator" />
-              <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                    src="./images/users/user_6.png" 
-                    alt="brubertone" 
-                    width="50" 
-                    height="50" 
-                    class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">User</h2>
-                    <p class="notification-message">Service "X" has changed to completed</p>
-                    <span class="notification-time">March 01 at 3:15am </span>
-                  </div>
-                </section>
-              </div>
-                <hr class="notification-separator" />
-                <div class="d-flex notification-content notification-content-hover">
-                <figure class="notification-figure">
-                  <img 
-                    src="./images/users/user_5.png" 
-                    alt="brubertone" 
-                    width="50" 
-                    height="50" 
-                    class="notification-avatar" 
-                  >
-                </figure>
-                <section class="d-flex justify-content-between flex-grow-1">
-                  <div class="d-flex flex-column notification-body">
-                    <h2 class="notification-title">User</h2>
-                    <p class="notification-message">A new note has been added on service "X"</p>
-                    <span class="notification-time">February 20 12:20am</span>
-                  </div>
-                </section>
-              </div>
-            </section>
             
-            <!-- Pagination -->
-            <hr class="notification-separator" />
-            <div class="container">
-              <div class="row">
-                  <div class="col-md-6">
-                      <p class="entries ">Showing 1-10 of 30 entries</p>
-                  </div>
-                  <div class="col-md-6 text-right">
-                      <button type="button" class="btn btn-primary rounded-circle">1</button>
-                      <button type="button" class="btn btn-primary rounded-circle">2</button>
-                      <button type="button" class="btn btn-primary rounded-circle">3</button>
-                      <span>Show</span>
-                      <div class="dropdown d-inline">
-                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              10
-                          </button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">10</a>
-                              <a class="dropdown-item" href="#">20</a>
-                              <a class="dropdown-item" href="#">30</a>
-                              <a class="dropdown-item" href="#">50</a>
-                          </div>
+            <!--card creation-->
+              <div class="row row-cols-1 g-0">
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/system-avatar.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">System</h2>
+                        <p class="notification-message">New team member joined! Welcome John to the team</p>
+                        <span class="notification-time">5 sec ago</span>
                       </div>
-                      <span>per page</span>
-                      <span class="vl"></span>
-                      <button type="button" class="btn btn-primary">
-                          <i class="fas fa-chevron-left"></i> Previous
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                          Next <i class="fas fa-chevron-right"></i>
-                      </button>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div class="notification-badge" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/users/user_1.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">User</h2>
+                        <p class="notification-message">Milestone reached Project Phase 1 complete successfully</p>
+                        <span class="notification-time">10 sec ago</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div class="notification-badge" /> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/users/user_2.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">Installer</h2>
+                        <p class="notification-message">Reminder: Milestone deadline approaching. Please ensure all task are completed</p>
+                        <span class="notification-time">10 min ago</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <!-- <div class="notification-badge" /> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/system-avatar.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">System</h2>
+                        <p class="notification-message">New document uploaded: Project Proposal_v2.pdf</p>
+                        <span class="notification-time">7 days ago at 10:10am</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div class="notification-badge" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/users/user_3.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">User</h2>
+                        <p class="notification-message">Changed order requested: Client requested additional feature implementation</p>
+                        <span class="notification-time">April 24 at 12:30pm</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div class="notification-badge" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/users/user_5.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">User</h2>
+                        <p class="notification-message">Changed order approved: Revised project timeline submitted and accepted</p>
+                        <span class="notification-time">April 19 at 1:40pm</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div class="notification-badge" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/system-avatar.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">System</h2>
+                        <p class="notification-message">New team member joined! Welcome Elizabeth to the team</p>
+                        <span class="notification-time">April 16 at 12:10am</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <!-- <div class="notification-badge" /> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/users/user_5.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">User</h2>
+                        <p class="notification-message">Reminder: Milestone deadline approaching. Service "X"</p>
+                        <span class="notification-time">April 10 at 3:10pm</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <!-- <div class="notification-badge" /> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/users/user_6.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">User</h2>
+                        <p class="notification-message">Service "X" has changed to completed</p>
+                        <span class="notification-time">March 1 at 3:30pm</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <!-- <div class="notification-badge" /> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="notification-separator" />
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex notification-content notification-content-hover">
+                        <figure class="notification-figure">
+                          <img 
+                            src="./images/users/user_3.png" 
+                            alt="brubertone" 
+                            width="50" 
+                            height="50" 
+                            class="notification-avatar" 
+                          >
+                        </figure>
+                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                        <h2 class="notification-title">User</h2>
+                        <p class="notification-message">A new note has been added on Service "X"</p>
+                        <span class="notification-time">Febrary 20 at 12:20pm</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <!-- <div class="notification-badge" /> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>      
+            <!-- table pagination -->
+            <div class="d-flex justify-content-end pt-4 mt-2 justify-content-between">
+              <div class="d-inline-flex align-items-center">
+                <span class="me-2">Showing 1-10 of 35 rows</span>
+                <select class="form-select me-2" style="width: 80px;">
+                  <option selected>10</option>
+                  <option value="1">5</option>
+                  <option value="2">10</option>
+                  <option value="3">100</option>
+                </select>
+                <ul class="pagination align-items-center">
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>  
+                </ul>
+                <span class="me-2">rows per page </span>
+                <span class="mx-2 table-navigation-sparator"></span>
+                <button class="btn btn-light btn-circle me-2" type="button">
+                  <span class="mdi mdi-chevron-left" style="font-size: 18px;"></span>                  
+                </button>
+                <button class="btn btn-secondary btn-circle" type="button">
+                  <span class="mdi mdi-chevron-right" style="font-size: 18px;"></span>                  
+                </button>
+              </div>
+            </div>
       </div>
     </div>    
     <!----------->

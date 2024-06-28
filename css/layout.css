@@ -405,6 +405,10 @@ body {
   background-color: rgba(103, 58, 183, 1);
 }
 
+.card-body {
+  padding: 0%;
+}
+
 .nav-item:hover {
   cursor: pointer;
 }
@@ -442,8 +446,10 @@ body {
 }
 
 .notification-separator {
-  width: auto;
-  margin: 0 27px;
+  height: 1px;
+  margin: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: #0000001F;
 }
 
@@ -451,16 +457,22 @@ body {
   margin-top: 15px;
 }
 
-.notification-content-hover:hover {
-  background-color: #F3F3F3;
-  border-radius: 16px;
-  cursor: pointer;
-}
-
 .notification-content {
   height: 69px;
   padding: 8px 14px;
   gap: 20px;
+}
+
+@media (max-width: 852px) {
+  .notification-content {
+    height: auto;
+  }
+}
+
+.notification-content-hover:hover {
+  background-color: #F3F3F3;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
 .notification-figure {
@@ -484,6 +496,7 @@ body {
   font-weight: 700;
   margin: 0;
   color: var(--primary);
+  
 }
 
 .notification-message {
@@ -550,5 +563,5 @@ body {
 
 .container-notification {
   height: auto;
-
+  padding: 10px 20px 20px 20px;
 }
