@@ -576,6 +576,10 @@ body {
   width: 100px;
 }
 
-.my-custom-card {
-  padding: 0%;
+.notification-card {
+  border-radius: 0px !important;
+}
+
+.notification-card-body {
+  padding: 0%;  
 }
