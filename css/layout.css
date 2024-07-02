@@ -405,10 +405,6 @@ body {
   background-color: rgba(103, 58, 183, 1);
 }
 
-.card-body {
-  padding: 0%;
-}
-
 .nav-item:hover {
   cursor: pointer;
 }
@@ -448,9 +444,8 @@ body {
 .notification-separator {
   height: 1px;
   margin: 0px;
-  padding-left: 15px;
-  padding-right: 15px;
   background-color: #0000001F;
+
 }
 
 .notification-item {
@@ -564,4 +559,23 @@ body {
 .container-notification {
   height: auto;
   padding: 10px 20px 20px 20px;
+}
+
+.pagination-container {
+  margin: 20px auto;
+  width: 80%;
+}
+.table-navigation-sparator {
+  border-left: 1px solid #dee2e6;
+  height: 24px;
+}
+.btn-circle {
+  border-radius: 50%;
+}
+.form-select {
+  width: 100px;
+}
+
+.my-custom-card {
+  padding: 0%;
 }

@@ -187,36 +187,36 @@
       <div id="content">
         <!-- notifications -->
         <div class="container-fluid">
-          <div class="container-fluid mt-4 shadow w-auto bg-white rounded container-notification">
-            <div class="d-flex justify-content-between flex-wrap flex-row">
-              <ul class="nav nav-underline ms-3 custom-nav-tabs" role="tablist" id="notificationTabs">
+          <div class="col mt-4">
+            <div class="container-fluid shadow w-auto bg-white rounded container-notification">
+              <div class="d-flex justify-content-between flex-wrap flex-row">
+                <ul class="nav nav-underline ms-3 custom-nav-tabs" role="tablist" id="notification-tabs">
                   <li class="nav-item tab-title">
-                      <a class="nav-link active" data-bs-toggle="tab" id="#all-tab" href="#all">All</a>
+                    <a class="nav-link active" data-bs-toggle="tab" id="#all-tab" href="#all">All</a>
                   </li>
                   <li class="nav-item tab-title">
-                      <a class="nav-link" data-bs-toggle="tab" id="#unread-tab" href="#unread">Unread</a>
+                    <a class="nav-link" data-bs-toggle="tab" id="#unread-tab" href="#unread">Unread</a>
                   </li>
                   <li class="nav-item tab-title">
-                      <a class="nav-link" data-bs-toggle="tab" id="read-tab" href="#read">Read</a>
+                    <a class="nav-link" data-bs-toggle="tab" id="read-tab" href="#read">Read</a>
                   </li>
-              </ul>
-              <div class="d-flex align-items-center">
-                <input 
-                  type="date" class="form-control" id="inputDuedate" name="dueDate" 
-                  value="15-05-2024" min="01-01-2000" max="31-12-2030" 
-                />
-                <button type="button" class="btn btn-white btn-mark">
-                  Mark all as read
-                </button>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <input 
+                    type="date" class="form-control" id="inputDuedate" name="dueDate" 
+                    value="15-05-2024" min="01-01-2000" max="31-12-2030" 
+                  />
+                  <button type="button" class="btn btn-white btn-mark">
+                    Mark all as read
+                  </button>
+                </div>
               </div>
-            </div>
-            <hr class="notification-separator" />
-            
-            <!--card creation-->
-              <div class="row row-cols-1 g-0">
+              <hr class="notification-separator" /> 
+              <!--card creation-->
+              <div class="row row-cols-1 g-0 mt-2 col col-sm col-md">
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -227,23 +227,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">System</h2>
-                        <p class="notification-message">New team member joined! Welcome John to the team</p>
-                        <span class="notification-time">5 sec ago</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <div class="notification-badge" />
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">System</h2>
+                          <p class="notification-message">New team member joined! Welcome John to the team</p>
+                          <span class="notification-time">5 sec ago</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <div class="notification-badge"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <hr class="notification-separator" />
+                </div>        
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -254,23 +254,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">User</h2>
-                        <p class="notification-message">Milestone reached Project Phase 1 complete successfully</p>
-                        <span class="notification-time">10 sec ago</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <div class="notification-badge" /> 
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">User</h2>
+                          <p class="notification-message">Milestone reached Project Phase 1 complete successfully</p>
+                          <span class="notification-time">10 sec ago</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <div class="notification-badge"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="notification-separator" />
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -281,23 +281,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">Installer</h2>
-                        <p class="notification-message">Reminder: Milestone deadline approaching. Please ensure all task are completed</p>
-                        <span class="notification-time">10 min ago</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <!-- <div class="notification-badge" /> -->
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">Installer</h2>
+                          <p class="notification-message">Reminder: Milestone deadline approaching. Please ensure all task are completed</p>
+                          <span class="notification-time">10 min ago</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <!-- <div class="notification-badge" /> -->
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="notification-separator" />
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -308,23 +308,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">System</h2>
-                        <p class="notification-message">New document uploaded: Project Proposal_v2.pdf</p>
-                        <span class="notification-time">7 days ago at 10:10am</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <div class="notification-badge" />
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">System</h2>
+                          <p class="notification-message">New document uploaded: Project Proposal_v2.pdf</p>
+                          <span class="notification-time">7 days ago at 10:10am</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <div class="notification-badge"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="notification-separator" />
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -335,23 +335,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">User</h2>
-                        <p class="notification-message">Changed order requested: Client requested additional feature implementation</p>
-                        <span class="notification-time">April 24 at 12:30pm</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <div class="notification-badge" />
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">User</h2>
+                          <p class="notification-message">Changed order requested: Client requested additional feature implementation</p>
+                          <span class="notification-time">April 24 at 12:30pm</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <div class="notification-badge"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="notification-separator" />
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -362,23 +362,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">User</h2>
-                        <p class="notification-message">Changed order approved: Revised project timeline submitted and accepted</p>
-                        <span class="notification-time">April 19 at 1:40pm</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <div class="notification-badge" />
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">User</h2>
+                          <p class="notification-message">Changed order approved: Revised project timeline submitted and accepted</p>
+                          <span class="notification-time">April 19 at 1:40pm</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <div class="notification-badge"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="notification-separator" />
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -389,23 +389,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">System</h2>
-                        <p class="notification-message">New team member joined! Welcome Elizabeth to the team</p>
-                        <span class="notification-time">April 16 at 12:10am</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <!-- <div class="notification-badge" /> -->
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">System</h2>
+                          <p class="notification-message">New team member joined! Welcome Elizabeth to the team</p>
+                          <span class="notification-time">April 16 at 12:10am</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <!-- <div class="notification-badge" /> -->
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="notification-separator" />
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -416,23 +416,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">User</h2>
-                        <p class="notification-message">Reminder: Milestone deadline approaching. Service "X"</p>
-                        <span class="notification-time">April 10 at 3:10pm</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <!-- <div class="notification-badge" /> -->
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">User</h2>
+                          <p class="notification-message">Reminder: Milestone deadline approaching. Service "X"</p>
+                          <span class="notification-time">April 10 at 3:10pm</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <!-- <div class="notification-badge" /> -->
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="notification-separator" />
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -443,23 +443,23 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">User</h2>
-                        <p class="notification-message">Service "X" has changed to completed</p>
-                        <span class="notification-time">March 1 at 3:30pm</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <!-- <div class="notification-badge" /> -->
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">User</h2>
+                          <p class="notification-message">Service "X" has changed to completed</p>
+                          <span class="notification-time">March 1 at 3:30pm</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <!-- <div class="notification-badge" /> -->
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="notification-separator" />
                 <div class="col">
                   <div class="card border-0">
-                    <div class="card-body">
+                    <div class="card-body my-custom-card">
                       <div class="d-flex notification-content notification-content-hover">
                         <figure class="notification-figure">
                           <img 
@@ -470,48 +470,28 @@
                             class="notification-avatar" 
                           >
                         </figure>
-                      <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
-                        <h2 class="notification-title">User</h2>
-                        <p class="notification-message">A new note has been added on Service "X"</p>
-                        <span class="notification-time">Febrary 20 at 12:20pm</span>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <!-- <div class="notification-badge" /> -->
+                        <div class="d-flex flex-column notification-body align-items-right flex-grow-1 ms-3">
+                          <h2 class="notification-title">User</h2>
+                          <p class="notification-message">A new note has been added on Service "X"</p>
+                          <span class="notification-time">February 20 at 12:20pm</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <!-- <div class="notification-badge" /> -->
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- table pagination -->
-            <div class="d-flex justify-content-end pt-4 mt-2 justify-content-between">
-              <div class="d-inline-flex align-items-center">
-                <span class="me-2">Showing 1-10 of 35 rows</span>
-                <select class="form-select me-2" style="width: 80px;">
-                  <option selected>10</option>
-                  <option value="1">5</option>
-                  <option value="2">10</option>
-                  <option value="3">100</option>
-                </select>
-                <ul class="pagination align-items-center">
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>  
-                </ul>
-                <span class="me-2">rows per page </span>
-                <span class="mx-2 table-navigation-sparator"></span>
-                <button class="btn btn-light btn-circle me-2" type="button">
-                  <span class="mdi mdi-chevron-left" style="font-size: 18px;"></span>                  
-                </button>
-                <button class="btn btn-secondary btn-circle" type="button">
-                  <span class="mdi mdi-chevron-right" style="font-size: 18px;"></span>                  
-                </button>
-              </div>
-            </div>
+            </div>  
+          </div>
+        </div>
       </div>
-    </div>    
+              
+      
+       
     <!----------->
     <!-- add profile photo Modal -->
     <div class="modal fade" id="addProfilePhoto" tabindex="-1" aria-labelledby="addProfilePhoto" aria-hidden="true">
