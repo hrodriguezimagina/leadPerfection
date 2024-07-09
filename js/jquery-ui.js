@@ -19053,3 +19053,39 @@ var widgetsTooltip = $.ui.tooltip;
 
 
 } );
+
+$(document).ready(function() {
+	// Initialize the tabs
+	$('#notification-tabs a').on('click', function(e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	});
+
+	// Mark all as read
+	$('.btn-mark').on('click', function() {
+	  $('.notification-card.unread').each(function() {
+		$(this).removeClass('unread').addClass('read');
+		$(this).find('.notification-badge').hide();
+	  });
+
+	  // Update the tab content
+	  updateTabs();
+	});
+
+	function updateTabs() {
+	  // Move notifications to the appropriate tabs
+	  $('.notification-card').each(function() {
+		if ($(this).hasClass('unread')) {
+		  $(this).appendTo('#unread');
+		} else if ($(this).hasClass('read')) {
+		  $(this).appendTo('#read');
+		}
+	  });
+
+	  // Ensure all notifications are also in the "All" tab
+	  $('#all').html($('.notification-card').clone());
+	}
+
+	// Initial update
+	updateTabs();
+  });

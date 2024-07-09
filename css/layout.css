@@ -454,6 +454,13 @@ body {
   height: 1px;
   margin: 0px;
   background-color: #0000001F;
+}
+
+.notification-separator-pag {
+  width: auto;
+  height: 1px;
+  margin-top: 30px;
+  background-color: #0000001F;
 
 }
 
@@ -591,4 +598,21 @@ body {
 
 .notification-card-body {
   padding: 0%;  
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid transparent; 
+}
+
+.custom-nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+.notification-card.unread .notification-badge {
+  display: block; /* Show badge for unread notifications */
+}
+.notification-card.read .notification-badge {
+  display: none; /* Hide badge for read notifications */
 }
