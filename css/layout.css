@@ -616,3 +616,9 @@ body {
 .notification-card.read .notification-badge {
   display: none; /* Hide badge for read notifications */
 }
+
+.white-block-login {
+  background-color: #ffffff;
+  border-radius: .25rem;
+  
+}

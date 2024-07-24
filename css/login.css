@@ -25,7 +25,8 @@
 
 .login-button {
   color: #fff;
-  background-color: #18417D;
+  border: none;
+  background-color: var(--primary);
 }
 
 .login-background {
@@ -34,14 +35,28 @@
   background-size:cover;
 }
 
+.login-background-blur {
+  background:url('../images/background.jpg') center center;
+  filter: blur(10px);
+  background-size:cover;
+  z-index: -1;
+}
+
 .login-background-color {
   background-color: var(--primary);
+}
+
+.login-white.block {
+  background-color: white;
+
 }
 
 .login-forgotten-form {
   background-color: #fff;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.176) 0px 16px 48px 0px;
+  position: relative;
+  z-index: 1;
 }
 
 .login-background-opacity {
