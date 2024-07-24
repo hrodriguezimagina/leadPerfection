@@ -602,23 +602,38 @@
             </div>
             
           </div>
+          <hr class="notification-separator-pag" />
           <!-- table pagination -->
-          <div class="d-flex justify-content-end pt-4">
+          <div class="d-flex justify-content-between align-items-center pt-2 pb-5 flex-wrap flex-row">
+            <div class="d-inline-flex align-items-center flex-wrap flex-row">
+              <span class="me-2">Showing <strong> 1-12 </strong> of 35 rows</span>
+            </div>
             <div class="d-inline-flex align-items-center">
-              <span class="me-2">Showing 1-10 of 35 rows</span>
-              <select class="form-select me-2" style="width: 80px;">
-                <option selected>10</option>
-                <option value="1">5</option>
-                <option value="2">10</option>
-                <option value="3">100</option>
-              </select>
-              <span class="me-2">rows per page </span>
-              <span class="mx-2 table-navigation-sparator"></span>
-              <button class="btn btn-light btn-circle me-2" type="button">
-                <span class="mdi mdi-chevron-left" style="font-size: 18px;"></span>                  
+              <button class="btn btn-primary btn-circle" type="button">
+                1
               </button>
-              <button class="btn btn-secondary btn-circle" type="button">
-                <span class="mdi mdi-chevron-right" style="font-size: 18px;"></span>                  
+              <button class="btn btn-light btn-circle btn-transparent" type="button">
+                2
+              </button>
+              <button class="btn btn-light btn-circle btn-transparent" type="button">
+                3
+              </button>
+            </div>
+            <div class="d-inline-flex align-items-center pt-2">
+              <span class="me-2">Show </span>
+              <select class="form-select me-2" style="width: 80px;">
+                <option selected>12</option>
+                <option value="1">24</option>
+                <option value="2">36</option>
+                <option value="3">99</option>
+              </select>
+              <span class="me-2">per page </span>
+              <span class="mx-2 table-navigation-sparator"></span>
+              <button class="btn btn-light btn-circle me-2 btn-transparent" type="button">
+                <span class="mdi mdi-chevron-left" style="font-size: 18px;"></span>
+              </button>
+              <button class="btn btn-light btn-circle btn-transparent" type="button">
+                <span class="mdi mdi-chevron-right" style="font-size: 18px;"></span>
               </button>
             </div>
           </div>
