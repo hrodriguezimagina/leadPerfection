@@ -32,67 +32,67 @@
         </div>
         
         <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto align-items-center align-items-stretch">
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-view-dashboard-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-account-group-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Your Team</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-flag-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Milestones</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-file-document-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Documents</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-format-list-text" style="font-size: 20px;"></span>
               <span class="sidebar-text">To Dos</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link btn-active" aria-current="page">            
               <span class="mdi mdi-note-edit-outline" style="font-size: 20px;"></span>              
               <span class="sidebar-text">Notes</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-receipt-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Payments</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-file-arrow-left-right-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Change orders</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-human-greeting-proximity" style="font-size: 20px;"></span>
               <span class="sidebar-text">Referrals</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-briefcase-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Services</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item list-hover">
             <a href="#" class="nav-link link-body-emphasis">
               <span class="mdi mdi-chart-box-outline" style="font-size: 20px;"></span>
               <span class="sidebar-text">Surveys/Reviews</span>
@@ -602,23 +602,38 @@
             </div>
             
           </div>
+          <hr class="notification-separator-pag" />
           <!-- table pagination -->
-          <div class="d-flex justify-content-end pt-4">
+          <div class="d-flex justify-content-between align-items-center pt-2 pb-5 flex-wrap flex-row">
+            <div class="d-inline-flex align-items-center flex-wrap flex-row">
+              <span class="me-2">Showing <strong> 1-12 </strong> of 35 rows</span>
+            </div>
             <div class="d-inline-flex align-items-center">
-              <span class="me-2">Showing 1-10 of 35 rows</span>
-              <select class="form-select me-2" style="width: 80px;">
-                <option selected>10</option>
-                <option value="1">5</option>
-                <option value="2">10</option>
-                <option value="3">100</option>
-              </select>
-              <span class="me-2">rows per page </span>
-              <span class="mx-2 table-navigation-sparator"></span>
-              <button class="btn btn-light btn-circle me-2" type="button">
-                <span class="mdi mdi-chevron-left" style="font-size: 18px;"></span>                  
+              <button class="btn btn-primary btn-circle" type="button">
+                1
               </button>
-              <button class="btn btn-secondary btn-circle" type="button">
-                <span class="mdi mdi-chevron-right" style="font-size: 18px;"></span>                  
+              <button class="btn btn-light btn-circle btn-transparent" type="button">
+                2
+              </button>
+              <button class="btn btn-light btn-circle btn-transparent" type="button">
+                3
+              </button>
+            </div>
+            <div class="d-inline-flex align-items-center pt-2">
+              <span class="me-2">Show </span>
+              <select class="form-select me-2" style="width: 80px;">
+                <option selected>12</option>
+                <option value="1">24</option>
+                <option value="2">36</option>
+                <option value="3">99</option>
+              </select>
+              <span class="me-2">per page </span>
+              <span class="mx-2 table-navigation-sparator"></span>
+              <button class="btn btn-light btn-circle me-2 btn-transparent" type="button">
+                <span class="mdi mdi-chevron-left" style="font-size: 18px;"></span>
+              </button>
+              <button class="btn btn-light btn-circle btn-transparent" type="button">
+                <span class="mdi mdi-chevron-right" style="font-size: 18px;"></span>
               </button>
             </div>
           </div>
