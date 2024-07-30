@@ -44,15 +44,6 @@ body {
   line-height: 1.42857;
 }
 
-.btn-mini {
-  width: 32px;
-  height: 32px;
-  padding: 0px 0px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 1.42857;
-}
-
 .card-title {
   font-weight: 800;  
   color: rgba(85, 85, 85, 1);
@@ -413,7 +404,6 @@ body {
 .notes-card-category_5 {  
   background-color: rgba(103, 58, 183, 1);
 }
-
 .nav-item:hover {
   cursor: pointer;
 }
@@ -561,12 +551,6 @@ body {
   align-items: center;
 }
 
-.vl {
-  border-left: 1px solid #ccc;
-  height: 25px; 
-  margin: 0 10px;
-  display: inline-block;
-}
 
 .entries {
   text-align: start;
@@ -581,15 +565,12 @@ body {
   margin: 20px auto;
   width: 80%;
 }
-.table-navigation-sparator {
+.table-navigation-separator {
   border-left: 1px solid #dee2e6;
   height: 24px;
 }
 .btn-circle {
   border-radius: 50%;
-}
-.form-select {
-  width: 100px;
 }
 
 .notification-card {
@@ -622,3 +603,4 @@ body {
   border-radius: .25rem;
   
 }
+
