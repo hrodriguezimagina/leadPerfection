@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Editing</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Mulish' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/layout.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!-- date picker -->
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-ui.js"></script>
+  </head>
+  <body>    
+    <!-- Sidebar -->
+    <div id="sidebar" style="display:none;" class="shadow">
+      <div  class="px-4 py-0 d-flex flex-column min-vh-100 shadow">
+        <!-- close sidebar button -->
+        <div class="d-flex justify-content-center">          
+          <!-- company logo -->
+          <div class="company-logo-container">
+            <img id="company-logo" alt="Company Logo" src="">
+          </div>
+          <div>
+            <div class="sidebar-button-close" id="close-sidebar-button">
+              <span class="mdi mdi-chevron-left" style="font-size: 24px;"></span>
+            </div>              
+          </div>
+        </div>
+        
+        <ul id="sidebar-menu"class="nav nav-pills flex-column mb-auto align-items-center align-items-stretch">
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link btn-active" aria-current="page">
+              <span class="mdi mdi-view-dashboard-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-account-group-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Your Team</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-flag-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Milestones</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-file-document-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Documents</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-format-list-text" style="font-size: 20px;"></span>
+              <span class="sidebar-text">To Dos</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-note-edit-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Notes</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-receipt-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Payments</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-file-arrow-left-right-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Change orders</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-human-greeting-proximity" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Referrals</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-briefcase-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Services</span>
+            </a>
+          </li>
+          <li class="nav-item list-hover">
+            <a href="#" class="nav-link link-body-emphasis">
+              <span class="mdi mdi-chart-box-outline" style="font-size: 20px;"></span>
+              <span class="sidebar-text">Surveys/Reviews</span>
+            </a>
+          </li>
+        </ul>        
+      </div>
+    </div>
+    <!-- main -->      
+    <div id="main" class="vh-100">
+      <!-- header -->
+      <header id="header">
+        <div class="d-flex flex-md-wrap align-items-center justify-content-end title-container">
+          <div class="sidebar-button-open">
+            <span class="mdi mdi-chevron-right" style="font-size: 24px;"></span>
+          </div>
+          <!-- content title -->
+          <div class="flex-grow-1">
+            <div class="header-title">
+              <h4><strong>Profile Editing</strong></h4> 
+            </div>
+          </div>
+        
+          <!-- job select -->
+          <div class="me-2">
+            <div class="input-group">
+              <span class="input-group-text mdi mdi-briefcase-outline bg-white d-none d-sm-block border-end-0" id="job-addon" style="font-size: 18px;"></span>
+              <select class="form-select form-select-sm" aria-label="Default select example" aria-describedby="job-addon">
+                <option selected>Select a job</option>
+                <option value="1">Job A</option>
+                <option value="2">Job B</option>
+                <option value="3">Job C</option>
+              </select>
+            </div>
+          </div>
+          <!-- notifications -->
+          <div>
+            <span class="mdi mdi-bell bg-white icon-primary" style="font-size: 24px;"></span>
+          </div>
+          <!-- profile -->
+          <div class="dropdown text-end me-3">
+            <a href="#" class="link-body-emphasis text-decoration-none dropdown-toggle d-none d-md-block" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+              <span class="fw-bold">brubertone</span>
+            </a>
+            <a href="#" class="d-md-none link-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
+            </a>
+
+            <ul class="dropdown-menu text-small">
+              <li>
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addProfilePhoto">
+                  <span class="mdi mdi-account-details-outline" style="font-size: 20px;"></span>
+                  Edit Profile
+                </a>
+              </li>
+              <li>
+                <!-- trigger addProfilePhoto modal -->
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changeProfilePhoto">
+                  <span class="mdi mdi-account-outline" style="font-size: 20px;"></span>
+                  My avatar
+                </a>
+              </li>
+              <li>
+                <!-- trigger changeProfilePhoto modal -->
+                <a class="dropdown-item" href="#">
+                  <span class="mdi mdi-lock-outline" style="font-size: 20px;"></span>
+                  Change password
+                </a>
+              </li>
+              <li>
+                <!-- settings -->
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#">
+                  <span class="mdi mdi-cog-outline" style="font-size: 20px;"></span>
+                  Settings
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <!-- Logout -->
+                <a class="dropdown-item" href="#">
+                  <span class="mdi mdi-logout" style="font-size: 20px;"></span>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>        
+      </header>
+      <!-- content -->
+      <div id="content">
+        <!-- profile edit card -->
+        <div class="container-fluid">
+          <div class="col mt-4">
+            <div class="container-fluid shadow w-auto bg-white rounded container-notification">
+              <div class="d-flex justify-content-between flex-wrap flex-row">
+                <ul class="nav nav-underline custom-nav-tabs" role="tablist" id="notification-tabs">
+                  <li class="nav-item tab-title">
+                    <a class="nav-link active" data-bs-toggle="tab" id="#all-tab" href="#gerenal" role="tab">General</a>
+                  </li>
+                </ul>
+              </div>
+              <hr class="pfledt-separator">
+              <div class="tab-content ">
+                <div class="card border-0 profile-editing-card">
+                  <div class="d-flex notification-content">
+                    <div class="row">
+                      <div class="col-12">
+                        <h5 class="profile-editing justify-content-start">Photo</h5>
+                      </div>
+                      <div class="col-12 d-flex align-items-center">
+                        <figure class="notification-figure">
+                          <img src="./images/profile.png" alt="brubertone" style="width: 100px; height: 100px;" class="notification-avatar">
+                        </figure>
+                        <div>
+                          <button type="button" class="btn btn-outline-danger btn-mark mb-2">
+                            Remove photo
+                          </button>
+                          <h5 class="total-file-size">Must be less than 2MB</h5>
+                        </div>
+                      </div>  
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 ">
+            <div class="row mt-15 pt-15">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" value="Bob">
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" value="Rubertone">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="mainEmail" class="form-label">Main email</label>
+                    <input type="email" class="form-control" id="mainEmail" value="bob@myhome.com">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="secondaryEmail" class="form-label">Secondary email</label>
+                    <input type="email" class="form-control" id="secondaryEmail" value="me@mail.com">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="mainPhone" class="form-label">Main phone</label>
+                    <input type="text" class="form-control" id="mainPhone" value="516-759-3334">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="secondaryPhone" class="form-label">Secondary phone</label>
+                    <input type="text" class="form-control" id="secondaryPhone" value="000-000-0000">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="currentPassword" class="form-label">Current password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="currentPassword" value="123F56s:">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!----------->
+    <!-- add profile photo Modal -->
+    <div class="modal fade" id="addProfilePhoto" tabindex="-1" aria-labelledby="addProfilePhoto" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h1 class="modal-title fs-5 text-bold" id="exampleModalLabel">Add Profile photo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <label for="file-upload" class="custom-file-upload btn btn-light my-2 d-flex flex-column align-items-center justify-content-center"
+              style="border-radius: 50%; height: 170px; width: 170px;">
+                <span class="mdi mdi-upload-outline" style="font-size: 45px"></span>
+                <span>Drag and drop your photo here</span>
+              </label>
+              <span>Or</span>
+              <label for="file-upload" class="custom-file-upload btn btn-light my-2 text-bold px-4 py-2">
+                Upload a photo
+              </label>
+              <input id="file-upload" type="file" class="btn btn-secondary" style="display: none;"/>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-primary">Upload</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- change profile photo Modal -->
+    <div class="modal fade" id="changeProfilePhoto" tabindex="-1" aria-labelledby="changeProfilePhoto" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h1 class="modal-title fs-5 text-bold" id="exampleModalLabel">Change Profile photo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <img src="./images/profile.png" alt="brubertone" width="170" height="170" class="rounded-circle mx-2">              
+              <label for="file-upload" class="custom-file-upload btn btn-light my-3 text-bold px-4 py-2">
+                Update photo
+              </label>
+              <input id="file-upload" type="file" class="btn btn-secondary" style="display: none;" />
+            </div>            
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-primary">Upload</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->    
+    <style type="text/css">
+      /* define company settings, logos and primary color from backend */
+      :root {
+        --company-logo: url('../images/company-logo.png');
+        --company-logo-mini: url('../images/company-logo-mini.png');
+        --primary: #FE8F01;
+      }
+    </style>
+    <script type="text/javascript">      
+    </script>
+    <script src="./js/layout.js"></script>    
+    <script src="./js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>

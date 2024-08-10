@@ -446,6 +446,12 @@ body {
   background-color: #0000001F;
 }
 
+.pfledt-separator {
+  height: 1px;
+  margin: 0px;
+  background-color: #0000001F;
+}
+
 .notification-separator-pag {
   width: auto;
   height: 1px;
@@ -542,6 +548,7 @@ body {
 .nav-underline .nav-link.active::after,
   .nav-underline .nav-link:hover::after {
     background-color: var(--primary); 
+
   }
 
 .custom-nav-tabs .nav-link {
@@ -604,3 +611,19 @@ body {
   
 }
 
+.profile-editing {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.total-file-size {
+  font-family: "Mulish",sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.profile-editing-card {
+  
+}
