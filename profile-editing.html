@@ -187,6 +187,7 @@
         <!-- profile edit card -->
         <div class="container-fluid">
           <div class="col mt-4">
+            <!-- Unificación de las dos secciones en una sola tarjeta -->
             <div class="container-fluid shadow w-auto bg-white rounded container-notification">
               <div class="d-flex justify-content-between flex-wrap flex-row">
                 <ul class="nav nav-underline custom-nav-tabs" role="tablist" id="notification-tabs">
@@ -196,66 +197,69 @@
                 </ul>
               </div>
               <hr class="pfledt-separator">
-              <div class="tab-content ">
-                <div class="card border-0 profile-editing-card">
-                  <div class="d-flex notification-content">
-                    <div class="row">
-                      <div class="col-12">
-                        <h5 class="profile-editing justify-content-start">Photo</h5>
-                      </div>
-                      <div class="col-12 d-flex align-items-center">
-                        <figure class="notification-figure">
-                          <img src="./images/profile.png" alt="brubertone" style="width: 100px; height: 100px;" class="notification-avatar">
-                        </figure>
-                        <div>
-                          <button type="button" class="btn btn-outline-danger btn-mark mb-2">
-                            Remove photo
-                          </button>
-                          <h5 class="total-file-size">Must be less than 2MB</h5>
-                        </div>
-                      </div>  
-                    </div>    
+              
+              <!-- Primera sección: Photo -->
+              <div class="card border-0 profile-editing-card p-3">
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="profile-editing justify-content-start">Photo</h5>
+                  </div>
+                  <div class="col-12 d-flex align-items-center">
+                    <figure class="notification-figure">
+                      <img src="./images/profile.png" alt="brubertone" style="width: 100px; height: 100px;" class="notification-avatar">
+                    </figure>
+                    <div class="ms-3"> <!-- Añadido margin-left -->
+                      <button type="button" class="btn btn-outline-danger btn-mark mb-2">
+                        Remove photo
+                      </button>
+                      <h5 class="total-file-size">Must be less than 2MB</h5>
+                    </div>
+                  </div>  
+                </div>    
+              </div>
+      
+              <!-- Segunda sección: Formulario -->
+              <div class="card border-0 profile-editing-card mt-3">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-prfedt" id="firstName" value="Bob">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-prfedt" id="lastName" value="Rubertone">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="mainEmail" class="form-label">Main email</label>
+                    <input type="email" class="form-prfedt" id="mainEmail" value="bob@myhome.com">
+                  </div>
+                  <div class="col-md-4 mt-3">
+                    <label for="secondaryEmail" class="form-label">Secondary email</label>
+                    <input type="email" class="form-prfedt" id="secondaryEmail" value="me@mail.com">
+                  </div>
+                  <div class="col-md-4 mt-3">
+                    <label for="mainPhone" class="form-label">Main phone</label>
+                    <input type="text" class="form-prfedt" id="mainPhone" value="516-759-3334">
+                  </div>
+                  <div class="col-md-4 mt-3">
+                    <label for="secondaryPhone" class="form-label">Secondary phone</label>
+                    <input type="text" class="form-prfedt" id="secondaryPhone" value="000-000-0000">
+                  </div>
+                  <div class="col-md-4 mt-3">
+                    <label for="currentPassword" class="form-label">Current password</label>
+                    <div class="input-group">
+                      <input type="password" class="form-prfedt" id="currentPassword" value="123F56s:">
+                      <button class="btn btn-outline-secondary" type="button">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
+              
+              <!-- Eliminado el <hr> que separaba las secciones -->
             </div>
           </div>
-          <div class="card border-0 ">
-            <div class="row mt-15 pt-15">
-                <div class="col-md-6">
-                    <label for="firstName" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="firstName" value="Bob">
-                </div>
-                <div class="col-md-6">
-                    <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" value="Rubertone">
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label for="mainEmail" class="form-label">Main email</label>
-                    <input type="email" class="form-control" id="mainEmail" value="bob@myhome.com">
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label for="secondaryEmail" class="form-label">Secondary email</label>
-                    <input type="email" class="form-control" id="secondaryEmail" value="me@mail.com">
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label for="mainPhone" class="form-label">Main phone</label>
-                    <input type="text" class="form-control" id="mainPhone" value="516-759-3334">
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label for="secondaryPhone" class="form-label">Secondary phone</label>
-                    <input type="text" class="form-control" id="secondaryPhone" value="000-000-0000">
-                </div>
-                <div class="col-md-6 mt-3">
-                    <label for="currentPassword" class="form-label">Current password</label>
-                    <div class="input-group">
-                        <input type="password" class="form-control" id="currentPassword" value="123F56s:">
-                        <button class="btn btn-outline-secondary" type="button">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
       </div>
     </div>
