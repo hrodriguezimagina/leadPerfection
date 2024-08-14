@@ -187,7 +187,6 @@
         <!-- profile edit card -->
         <div class="container-fluid">
           <div class="col mt-4">
-            <!-- Unificación de las dos secciones en una sola tarjeta -->
             <div class="container-fluid shadow w-auto bg-white rounded container-notification">
               <div class="d-flex justify-content-between flex-wrap flex-row">
                 <ul class="nav nav-underline custom-nav-tabs" role="tablist" id="notification-tabs">
@@ -197,18 +196,16 @@
                 </ul>
               </div>
               <hr class="pfledt-separator">
-              
-              <!-- Primera sección: Photo -->
               <div class="card border-0 profile-editing-card p-3">
                 <div class="row">
                   <div class="col-12">
-                    <h5 class="profile-editing justify-content-start">Photo</h5>
+                    <h5 class="profile-editing-title justify-content-start">Photo</h5>
                   </div>
                   <div class="col-12 d-flex align-items-center">
                     <figure class="notification-figure">
                       <img src="./images/profile.png" alt="brubertone" style="width: 100px; height: 100px;" class="notification-avatar">
                     </figure>
-                    <div class="ms-3"> <!-- Añadido margin-left -->
+                    <div class="ms-3"> 
                       <button type="button" class="btn btn-outline-danger btn-mark mb-2">
                         Remove photo
                       </button>
@@ -218,25 +215,45 @@
                 </div>    
               </div>
       
-              <!-- Segunda sección: Formulario -->
               <div class="card border-0 profile-editing-card mt-3">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-4 ">
                     <label for="firstName" class="form-label">First name</label>
-                    <input type="text" class="form-prfedt" id="firstName" value="Bob">
+                    <div class="custom-input-group">
+                      <span class="input-group-text">
+                        <img src="/images/name-icon.png" alt="person-icon" style="width: 24px; height: 24px;">
+                      </span>
+                      <input type="text" class="form-control" id="firstName" value="Bob">
+                    </div>
                   </div>
                   <div class="col-md-4">
-                    <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-prfedt" id="lastName" value="Rubertone">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <div class="custom-input-group">
+                      <span class="input-group-text">
+                        <img src="/images/name-icon.png" alt="person-icon" style="width: 24px; height: 24px;">
+                      </span>
+                      <input type="text" class="form-control" id="lastName" value="Rubertone">
+                    </div>
                   </div>
                   <div class="col-md-4">
                     <label for="mainEmail" class="form-label">Main email</label>
-                    <input type="email" class="form-prfedt" id="mainEmail" value="bob@myhome.com">
+                    <div class="custom-input-group">
+                      <span class="input-group-text">
+                        <img src="/images/email-icon.png" alt="email-icon" style="width: 24px; height: 24px;">
+                      </span>
+                      <input type="text" class="form-control" id="mainEmail" value="bob@myhome.com">
+                    </div>
                   </div>
-                  <div class="col-md-4 mt-3">
-                    <label for="secondaryEmail" class="form-label">Secondary email</label>
-                    <input type="email" class="form-prfedt" id="secondaryEmail" value="me@mail.com">
+                  <div class="col-md-4 form-space">
+                    <label for="firstName" class="form-label">Secondary email</label>
+                    <div class="custom-input-group">
+                      <span class="input-group-text">
+                        <img src="/images/email-icon.png" alt="email-icon" style="width: 24px; height: 24px;">
+                      </span>
+                      <input type="text" class="form-control" id="mainEmail" value="me@amil .com">
+                    </div>
                   </div>
+                  
                   <div class="col-md-4 mt-3">
                     <label for="mainPhone" class="form-label">Main phone</label>
                     <input type="text" class="form-prfedt" id="mainPhone" value="516-759-3334">
