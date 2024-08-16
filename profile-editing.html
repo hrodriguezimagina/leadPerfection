@@ -186,8 +186,8 @@
       <div id="content">
         <!-- profile edit card -->
         <div class="container-fluid">
-          <div class="col mt-4">
-            <div class="container-fluid shadow w-auto bg-white rounded container-notification">
+          <div class="col mt-4 pb-4">
+            <div class="container-fluid shadow w-auto bg-white rounded container-editprofile">
               <div class="d-flex justify-content-between flex-wrap flex-row">
                 <ul class="nav nav-underline custom-nav-tabs" role="tablist" id="notification-tabs">
                   <li class="nav-item tab-title">
@@ -196,7 +196,7 @@
                 </ul>
               </div>
               <hr class="pfledt-separator">
-              <div class="card border-0 profile-editing-card p-3">
+              <div class="card border-0 profile-editing-card ">
                 <div class="row">
                   <div class="col-12">
                     <h5 class="profile-editing-title justify-content-start">Photo</h5>
@@ -214,34 +214,34 @@
                   </div>  
                 </div>    
               </div>
-      
-              <div class="card border-0 profile-editing-card mt-3">
+              <h5 class="text-title">Personal Information</h5>
+              <div class="card border-0 profile-editing-card">
                 <div class="row">
-                  <div class="col-md-4 ">
+                  <div class="col-md-4 form-space">
                     <label for="firstName" class="form-label">First name</label>
                     <div class="custom-input-group">
                       <span class="input-group-text">
                         <img src="/images/name-icon.png" alt="person-icon" style="width: 24px; height: 24px;">
                       </span>
-                      <input type="text" class="form-control" id="firstName" value="Bob">
+                      <input type="text" class="form-control-edt" id="firstName" value="Bob">
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4 form-space">
                     <label for="lastName" class="form-label">Last name</label>
                     <div class="custom-input-group">
                       <span class="input-group-text">
                         <img src="/images/name-icon.png" alt="person-icon" style="width: 24px; height: 24px;">
                       </span>
-                      <input type="text" class="form-control" id="lastName" value="Rubertone">
+                      <input type="text" class="form-control-edt" id="lastName" value="Rubertone">
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4 form-space">
                     <label for="mainEmail" class="form-label">Main email</label>
                     <div class="custom-input-group">
                       <span class="input-group-text">
                         <img src="/images/email-icon.png" alt="email-icon" style="width: 24px; height: 24px;">
                       </span>
-                      <input type="text" class="form-control" id="mainEmail" value="bob@myhome.com">
+                      <input type="text" class="form-control-edt" id="mainEmail" value="bob@myhome.com">
                     </div>
                   </div>
                   <div class="col-md-4 form-space">
@@ -250,7 +250,7 @@
                       <span class="input-group-text">
                         <img src="/images/email-icon.png" alt="email-icon" style="width: 24px; height: 24px;">
                       </span>
-                      <input type="text" class="form-control" id="mainEmail" value="me@amil .com">
+                      <input type="text" class="form-control-edt" id="mainEmail" value="me@amil .com">
                     </div>
                   </div>
                   <div class="col-md-4 form-space">
@@ -268,18 +268,23 @@
                       <span class="input-group-text">
                         <img src="/images/phone-icon.png" alt="email-icon" style="width: 24px; height: 24px;">
                       </span>
-                      <input type="text" class="form-control" id="secondaryPhone" value="000-000-0000">
+                      <input type="text" class="form-control-edt" id="secondaryPhone" value="000-000-0000">
                     </div>
                   </div>
                   <div class="col-md-4 form-space">
-                    <label for="secondaryPhone" class="form-label">Secondary phone</label>
+                    <label for="currentPassword" class="form-label">Current password</label>
                     <div class="custom-input-group">
-                      <input type="text" class="form-control" id="secondaryPhone" value="123F56s:">
+                      <input type="text" class="form-control-edt-pssw" id="secondaryPhone" value="123F56s:">
                       <span class="input-group-text">
                         <img src="/images/eye-icon.png" alt="email-icon" style="width: 24px; height: 24px; margin-right: 14.67px;">
                       </span>
                     </div>
                   </div>
+                </div>
+                <hr class="pfledt-separator-bottom">
+                <div class="d-flex justify-content-end btn-area">
+                  <button type="button" class="btn btn-cancel me-2">Cancel</button>
+                  <button type="button" class="btn btn-save">Save</button>
                 </div>
               </div>
               
