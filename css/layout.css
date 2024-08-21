@@ -752,3 +752,38 @@ body {
   padding-left: 14px;
   padding-right: 0px;
 }
+
+.block-height {
+  height: 50px;
+}
+
+.edtpfl-figure {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.edtpfl-avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* Tamaño del ícono */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.edtpfl-figure:hover .edit-icon {
+  opacity: 1;
+}
