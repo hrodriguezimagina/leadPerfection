@@ -760,6 +760,8 @@ body {
 .edtpfl-figure {
   position: relative;
   display: inline-block;
+  width: 100px;
+  height: 100px;
   margin: 0;
 }
 
@@ -772,18 +774,30 @@ body {
 
 .edit-icon {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 24px; /* Tamaño del ícono */
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 8px;
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .edtpfl-figure:hover .edit-icon {
-  opacity: 1;
+  opacity: 0.75;
+}
+
+.icon {
+  color: white;
+  font-size: 30px;
+}
+
+.fa-pencil:hover {
+  color: #ffffff;
 }
