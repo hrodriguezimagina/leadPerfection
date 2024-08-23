@@ -111,6 +111,7 @@ body {
 
 .icon-primary {
   color: var(--primary);
+  padding: 0px 20px;
 }
 
 .icon-black-30 {
@@ -439,6 +440,7 @@ body {
 .btn-mark {
   font-size: 14px;
   font-weight: 500;
+  width: 100%;
 }
 
 .notification-badge {
@@ -581,6 +583,7 @@ body {
 
 .container-editprofile{
   height: auto;
+  border-radius: 10px;
   padding: 10px 20px 10px 20px;
 }
 
@@ -781,7 +784,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px; /* Tamaño del ícono */
+  font-size: 24px; 
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
@@ -800,4 +803,26 @@ body {
 
 .fa-pencil:hover {
   color: #ffffff;
+}
+
+.text-title-dropdown {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 800; 
+  line-height: 20px;
+  color: black;
+  padding: none;
+}
+
+.text-title-dropdown:hover,
+.text-title-dropdown:focus,
+.text-title-dropdown:active {
+  color: black !important; 
+  background-color: white !important; 
+  box-shadow: none !important; 
+  outline: none !important; 
+}
+
+.dropdown-spc {
+  padding: 0px 40px 0px 20px;
 }
