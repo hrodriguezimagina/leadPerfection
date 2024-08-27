@@ -5,11 +5,7 @@ $( document ).ready(function() {
   const sidebarCollapsedWidth = '104px';
   const sidebarExpandedWidth = '258px';
 
-  // stores the selected date
-  let selectedDate;
-
   init();
-  configDatepicker()
   
   jQuery(window).resize(function(){
    init();
@@ -83,27 +79,5 @@ $( document ).ready(function() {
     jQuery('.sidebar-button-open').hide() 
     jQuery('#company-logo').show()
     jQuery('.company-logo-container').css('height', '100px')
-  }
-
-  /* jQuery datepicker */
-  function configDatepicker(){  
-    const datePickerContainer = jQuery('#datepicker-container');
-    // init and hide datepicker
-    jQuery("#datepicker").datepicker({
-      autoSize: true,
-      firstDay: 1, // Start with Monday, 
-      dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      onSelect: function(date, obj){
-        selectedDate = date
-      }
-    });
-    datePickerContainer.hide();
-    
-    jQuery('#datepicker-button').on("click", function (e) {
-      datePickerContainer.toggle();
-    });    
-    jQuery('#datepicker-save-button').on("click", function (e) {
-      datePickerContainer.hide();
-    });
   }
 });
