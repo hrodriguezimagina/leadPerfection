@@ -132,52 +132,47 @@
           <div>
             <span class="mdi mdi-bell bg-white icon-primary" style="font-size: 24px;"></span>
           </div>
+          <!--Image profile + modal-->
+          <div>
+            <a href="#" class="link-body-emphasis text-decoration-none d-none d-md-block" data-bs-toggle="modal" data-bs-target="#changeProfilePhoto">
+              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle">
+          </a>
+          <a href="#" class="d-md-none link-body-emphasis text-decoration-none" data-bs-toggle="modal" data-bs-target="#changeProfilePhoto">
+              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle">
+          </a>
+          </div>
           <!-- profile -->
-          <div class="dropdown text-end me-3">
-            <a href="#" class="link-body-emphasis text-decoration-none dropdown-toggle d-none d-md-block" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
-              <span class="fw-bold">brubertone</span>
-            </a>
-            <a href="#" class="d-md-none link-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="./images/user.png" alt="brubertone" width="40" height="40" class="rounded-circle mx-2">
-            </a>
-
-            <ul class="dropdown-menu text-small">
-              <li>
-                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addProfilePhoto">
-                  <span class="mdi mdi-account-details-outline" style="font-size: 20px;"></span>
-                  Edit Profile
-                </a>
-              </li>
-              <li>
-                <!-- trigger addProfilePhoto modal -->
-                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changeProfilePhoto">
-                  <span class="mdi mdi-account-outline" style="font-size: 20px;"></span>
-                  My avatar
-                </a>
-              </li>
-              <li>
-                <!-- trigger changeProfilePhoto modal -->
-                <a class="dropdown-item" href="#">
-                  <span class="mdi mdi-lock-outline" style="font-size: 20px;"></span>
-                  Change password
-                </a>
-              </li>
-              <li>
-                <!-- settings -->
-                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#">
-                  <span class="mdi mdi-cog-outline" style="font-size: 20px;"></span>
-                  Settings
-                </a>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <!-- Logout -->
-                <a class="dropdown-item" href="#">
-                  <span class="mdi mdi-logout" style="font-size: 20px;"></span>
-                  Logout
-                </a>
-              </li>
+          <div class="dropdown text-end dropdown-spc">
+            <button class="btn btn-secondary dropdown-toggle bg-white border-0 text-title-dropdown" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                brubertone
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end text-small" aria-labelledby="dropdownMenuButton">
+                <li>
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addProfilePhoto">
+                        <span class="mdi mdi-account-details-outline" style="font-size: 20px;"></span> Edit Profile
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changeProfilePhoto">
+                        <span class="mdi mdi-account-outline" style="font-size: 20px;"></span> My avatar
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <span class="mdi mdi-lock-outline" style="font-size: 20px;"></span> Change password
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#">
+                        <span class="mdi mdi-cog-outline" style="font-size: 20px;"></span> Settings
+                    </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <span class="mdi mdi-logout" style="font-size: 20px;"></span> Logout
+                    </a>
+                </li>
             </ul>
           </div>
         </div>        
