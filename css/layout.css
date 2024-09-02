@@ -823,6 +823,63 @@ body {
   outline: none !important; 
 }
 
-.dropdown-spc {
-  padding: 0px 40px 0px 20px;
+#dropdownMenuButton {
+  padding: 0px 40px 0px 20px; }
+
+
+@media (max-width: 600px) { 
+  #dropdownMenuButton {
+    font-size: 0; 
+    padding: 8px 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: auto; 
+  }
+
+  #dropdownMenuButton::after {
+    content: ""; 
+    font-size: 16px; 
+    color: black; 
+    margin-left: 0; 
+    display: inline-block; 
+  }
+}
+
+.title-responsive {
+  font-size: 1.5rem; 
+}
+
+@media (max-width: 768px) {
+  .title-responsive {
+    font-size: 1.3rem;
+    margin: 5px;
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .title-responsive {
+    font-size: 1.1rem;
+    margin: 5px; 
+  }
+}
+
+.job-select-responsive {
+  margin-top: 1rem;
+  margin: 5px; 
+}
+
+@media (max-width: 800px) {
+  .job-select-responsive {
+    margin-top: 0.75rem;
+    margin: 5px; 
+  }
+}
+
+@media (max-width: 600px) {
+  .job-select-responsive {
+    margin-top: 0.5rem; 
+    margin: 5px; 
+  }
 }
